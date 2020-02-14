@@ -1,0 +1,35 @@
+Para que se escuche un sonido libre de glitches, es necesario que el I2S (para el DAC) y el ADC trabajen a frecuencias lo mas cercanas posible.
+
+I2S:
+Para comunicarse con el DAC "CS43L22", debe generarle el Master Clock para que pueda filtrar correctamente ya que se trata de un DAC delta-sigma.
+Segun la hoja de datos, cuando el Master Clock del I2S es generado, La Fs se calcula con la siguiente formula:
+FS = I2SxCLK / ((32*2)*((2*DIV)+ODD)*4)
+Por otro lado I2SxCLK se calcula como:
+I2SxCLK = 1MHz * PLLI2SN / PLLI2SR
+Para una Fs=32KHz recomienda:
+	- I2SxCLK=106.5MHz (PLLI2SN=213 PLLI2SR=2)
+	- DIV=6
+	- ODD=1
+Este seteo genera una Fs=32001.20117Hz (con un error del 0.0038% respecto a los 32KHz)
+
+
+
+ADC:
+La hoja de datos define el periodo de sampleo como:
+Tconv = (Sampling_time + resolution) [ADCCLK cycles]
+siendo ADCCLK configurable mediante el STM32CubeMX
+Teniendo en cuenta que se dispone de 1 solo ADC y se requieren medir 2 entradas (ADC y potenciometro), se deben configurar 2 canales para medir secuencialmente.
+La configuracion mas cercana al Fs del I2S es la siguiente:
+	- ADCCLK = 1,34375‬ [MHz] (PLCK2 = 8.0625 [MHz], Prescaler_ADC = 6)
+	- Resolucion = 12 [bits]
+	- Sampling_time (ADC) = 15 [ciclos]
+	- Sampling_time (potenciometro) = 3 [ciclos]
+Tconv (ADC) = 15 + 12 = 27 [cycles]
+Tconv (potenciometro) = 3 + 12 = 15 [cycles]
+Fs = ADCCLK  / (Sampling_time (ADC) + Sampling_time (potenciometro))
+Fs = 1,34375‬ [MHz] / (27 + 15)
+Fs = 31.994,04761
+Error = 0,0224% (respecto a la Fs del I2S)
+
+
+El codigo debe contemplar los casos donde se produzca la interrupción simultánea y continue normalmente. Esto se puede realizar implementando una sencilla FSM (Finite-State Machine) que se explicara a continuacion:
