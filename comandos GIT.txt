@@ -1,0 +1,5 @@
+cd home/jrosmirez94/Pedal-Multiefecto
+
+git add --all
+git commit -m "mensaje"
+git push
