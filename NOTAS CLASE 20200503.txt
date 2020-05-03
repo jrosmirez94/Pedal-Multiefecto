@@ -1,0 +1,65 @@
+RCC
+
+HSE: clock de alta velocidad 8 MHZ
+LSE: clock de baja velocidad 32khz (RTC) en mi caso no lo uso
+
+Analog
+
+ADC
+
+los que me aparecen en rosita significa que comparte terminales en el board y no puedo usarlos
+
+todos los canales no se usan al mismo tiempo, se usan secuencialmente como pertenecen al mismo HW comparten CLOCK
+
+Es mas facil regular el clock por el timer pero hay que configurarlo (es mas complicado), si lo haces por SW es mas limitado. y ademas tenemos que sincronizarlo con otro clock y se hace dificil
+
+I2C: (inter integrated circuits)
+este tiene un cable de dato, por lo tanto requiere decir que el I2C es half-duplex
+
+el protocolo es conocido
+
+SDL: Dato
+SCL: CLOCK
+
+
+SPI: tiene un Slave select por cada Slave
+       se puede conectar en serio o paralelo
+       tiene 2 cable de datos: miso y mosi
+       por lo tanto es Full-duplex
+
+el protocolo de SPI puede ser privado dependiendo el fabricante
+
+
+
+I2S: (inter integrated sound) para enviar audio
+es para conectar cosas que estan en el board pero dentro del chip
+
+tiene 3 cables
+SCK: system clock
+WS: word select
+SD: serial data 
+
+se parece al I2C pero tiene un cable de mas, que seria el WS: usualmente es de 44khz
+
+
+Aproximaxiones sucesivas [ADC Interno] [SI VAMOS A USARLO]
+_el sigma delta [ADC externo] necesita tener un SCK 256 veces mas rápido que WS. [NO VAMOS A USARLO]_
+
+Delta sigma [DAC externo] necesita tener un SCK 256 veces mas rápido que WS.
+
+
+CLOCK SYSTEM
+
+Me interesa configurar
+
+APB1 Peripheral []
+APB1 Timer       [Timer 2 y 3]  Datasheet DS10314 Pag 55 y 56
+APB2 Peripheral [ADC] Visto en el Reference Manual RM0383 Pag 214
+APB2 Timer       [Timer]
+
+I2S Clocks
+
+
+
+
+
