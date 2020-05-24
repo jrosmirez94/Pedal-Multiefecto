@@ -26,4 +26,4 @@ void CS43L22_init(void)
 	CS43L22_transmit(0x06,0x07);  //Slave mode. SCLK Polarity Not Inverted. DSP Disabled. Format I2S. 16-bit data
 	//Final required start
 	CS43L22_transmit(0x02,0x9E);
-}	
+}

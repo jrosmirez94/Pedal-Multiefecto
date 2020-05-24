@@ -1,0 +1,13 @@
+Timers
+
+Por hoja de dato:
+TIM1 -> APB2 Timer 
+
+para que interrumpa tengo que poner el prescaler o el counter period ejemplo para que interrumpa 96khz, tengo que dividir por mil el clock de APB2(suponiendo que esta seteado a 96Mhz)
+
+el numero de bits me limita el numero de cuentas
+
+
+un mecanis por polling(encuesta) es bloqueante, porque interrumpe el programa para ver si un dispositivo esta disponible
+
+como es un solo valor usamos interrupcion, se sería mas de uno, deberíamos usar DMA
