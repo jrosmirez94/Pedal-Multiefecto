@@ -337,7 +337,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F411xE</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/ST/STM32_USB_Host_Library/Core/Inc;../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include</IncludePath>
+              <IncludePath>../Inc;  ../Drivers/STM32F4xx_HAL_Driver/Inc;  ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;  ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc;  ../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc;  ../Drivers/CMSIS/Device/ST/STM32F4xx/Include;  ../Drivers/CMSIS/Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -389,9 +389,6 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>::CMSIS</GroupName>
-        </Group>
-        <Group>
           <GroupName>Application/User</GroupName>
           <Files>
             <File>
@@ -423,6 +420,11 @@
               <FileName>spi.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Src/tim.c</FilePath>
             </File>
             <File>
               <FileName>usb_host.c</FileName>
@@ -615,6 +617,9 @@
               <FilePath>../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Src/usbh_cdc.c</FilePath>
             </File>
           </Files>
+        </Group>
+        <Group>
+          <GroupName>::CMSIS</GroupName>
         </Group>
       </Groups>
     </Target>
