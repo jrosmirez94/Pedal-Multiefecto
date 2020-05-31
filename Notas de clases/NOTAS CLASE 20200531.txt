@@ -1,0 +1,27 @@
+12 bits de resolucion (cada bit es un ciclo)
+mas
+3 ciclos del Rank
+15 cilcos en total
+
+vamos a disparar el ADC por un Timer
+
+activamos el DMA en el CUBE
+la interrupcion normal e una interrupcion que te avisa por cada muestra que te llega(es decir 256 veces), en cambio DMA acumula las muestras te avisa por interrupcción.
+
+void HAL_ADC_ConvHalfCpltCallback (ADC_HandleTypeDef * hadc)
+esta funcion me avisa, osea me interrumpe, cuando se completo la mitad del buffer, en este caso 128 muestras
+
+para el tema señales con filtros y efectos se hacen a traves de buffer, con una sola muestra no te sirve
+
+
+
+
+
+
+static int i=0;
+	i++;
+	if(i==32000)
+	{	
+		HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_15);
+		i=0;
+	}	

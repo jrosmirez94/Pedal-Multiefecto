@@ -20,6 +20,8 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "adc.h"
+#include "dma.h"
 #include "i2c.h"
 #include "i2s.h"
 #include "spi.h"
@@ -51,6 +53,9 @@
 /* USER CODE BEGIN PV */
 extern I2C_HandleTypeDef hi2c1;
 extern TIM_HandleTypeDef htim3;
+extern TIM_HandleTypeDef htim9;
+extern ADC_HandleTypeDef hadc1;
+uint32_t adc_buffer[256];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -94,16 +99,22 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_I2C1_Init();
   MX_I2S2_Init();
   MX_I2S3_Init();
   MX_SPI1_Init();
   MX_USB_HOST_Init();
   MX_TIM3_Init();
+  MX_ADC1_Init();
+  MX_TIM9_Init();
   /* USER CODE BEGIN 2 */
 	CS43L22_init ();
 	
+	HAL_TIM_OC_Start_IT(&htim9, TIM_CHANNEL_1);
 	HAL_TIM_OC_Start_IT(&htim3, TIM_CHANNEL_1);
+	HAL_Delay(100);
+	HAL_ADC_Start_DMA(&hadc1, adc_buffer, 256);
   /* USER CODE END 2 */
 
   /* Infinite loop */
