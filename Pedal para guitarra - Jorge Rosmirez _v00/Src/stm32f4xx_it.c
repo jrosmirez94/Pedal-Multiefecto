@@ -225,7 +225,7 @@ void TIM1_BRK_TIM9_IRQHandler(void)
   /* USER CODE END TIM1_BRK_TIM9_IRQn 0 */
   HAL_TIM_IRQHandler(&htim9);
   /* USER CODE BEGIN TIM1_BRK_TIM9_IRQn 1 */
-HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_14);
+HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_14); //rojo
   /* USER CODE END TIM1_BRK_TIM9_IRQn 1 */
 }
 
@@ -243,7 +243,7 @@ void TIM3_IRQHandler(void)
 	i++;
 	if(i==32000)
 	{	
-		HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_12);
+		HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_12); // verde
 		i=0;
 	}	
   /* USER CODE END TIM3_IRQn 1 */
@@ -288,9 +288,9 @@ void HAL_ADC_ConvCpltCallback (ADC_HandleTypeDef * hadc)
 {
 	static int i=0;
 	i++;
-	if(i==125)
+	if(i==250) 
 	{	
-		HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_15);
+		HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_15); // blue 
 		i=0;
 	}
 }

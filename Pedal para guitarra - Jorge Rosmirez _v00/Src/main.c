@@ -32,6 +32,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "CS43L22.h"
+#include "main_funcs.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -51,11 +52,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-extern I2C_HandleTypeDef hi2c1;
-extern TIM_HandleTypeDef htim3;
-extern TIM_HandleTypeDef htim9;
-extern ADC_HandleTypeDef hadc1;
-uint32_t adc_buffer[256];
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -109,12 +106,7 @@ int main(void)
   MX_ADC1_Init();
   MX_TIM9_Init();
   /* USER CODE BEGIN 2 */
-	CS43L22_init ();
-	
-	HAL_TIM_OC_Start_IT(&htim9, TIM_CHANNEL_1);
-	HAL_TIM_OC_Start_IT(&htim3, TIM_CHANNEL_1);
-	HAL_Delay(100);
-	HAL_ADC_Start_DMA(&hadc1, adc_buffer, 256);
+	main_init ();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -122,7 +114,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-    MX_USB_HOST_Process();
+   main_loop();
 
     /* USER CODE BEGIN 3 */
   }
