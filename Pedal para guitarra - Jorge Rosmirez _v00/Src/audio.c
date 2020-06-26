@@ -75,16 +75,13 @@ void init_audio ()
 }
 
 
-
-
-
-
 /******************************************************************************
  *  						INTERRUPT HANDLERS
  ******************************************************************************/
 // not use __disable_irq() and __enable_irq() to do critical stuffs
 // put transmit_ready = HAL_TIMEOUT at finalize using buffer_float
 
+//**ADC**//
 
 void HAL_ADC_ConvHalfCpltCallback (ADC_HandleTypeDef * hadc)
 {
@@ -96,7 +93,7 @@ void HAL_ADC_ConvHalfCpltCallback (ADC_HandleTypeDef * hadc)
 		arm_q31_to_float (& _dma_in [0], _dma_float, DMA_HALF_SIZE); //conversion de formato q31 a float
 		buffer_float = _dma_float;
 
-		transmit_ready = DMA_ADC_READY;		// hasta tengo la mitad del buffer lleno
+		transmit_ready = DMA_ADC_READY;		// hasta aca tengo la mitad del buffer lleno
 	}
 }
 
@@ -110,7 +107,7 @@ void HAL_ADC_ConvCpltCallback (ADC_HandleTypeDef * hadc)
 		arm_q31_to_float (& _dma_in [DMA_HALF_SIZE], _dma_float, DMA_HALF_SIZE);
 		buffer_float = _dma_float;
 
-		transmit_ready = DMA_ADC_READY;
+		transmit_ready = DMA_ADC_READY; // hasta aca se completó la otra mitad
 	}
 }
 

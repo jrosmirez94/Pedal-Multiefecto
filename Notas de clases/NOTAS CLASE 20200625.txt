@@ -1,0 +1,25 @@
+CLASE EFECTOS:
+
+I2S
+
+el DAC necesita  el master clock output por eso en el cube va tildado
+
+Data and Frame format
+16 bits de informacion de audio en un paquete de 32bits
+estoy desperdiciando memoria (despues vemos si podemos optimizar)
+
+Audio Frecuency 32Khz
+
+en la configuracion DMA
+agrego SPI3_TX (es el nombre que tiene el canal)
+usualmente el SPI y el I2S se comparte el canal y el HW
+
+
+NOTA:
+
+HAL_Delay (100); 
+es un delay en este caso 100 ms
+
+Castear un argumento
+es "hacerle creer" a la funcion que una variable tiene otro tipo de dato
+(uint16_t *)

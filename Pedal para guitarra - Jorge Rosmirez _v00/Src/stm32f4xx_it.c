@@ -56,9 +56,9 @@
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
-extern HCD_HandleTypeDef hhcd_USB_OTG_FS;
 extern DMA_HandleTypeDef hdma_adc1;
 extern ADC_HandleTypeDef hadc1;
+extern DMA_HandleTypeDef hdma_spi3_tx;
 extern TIM_HandleTypeDef htim3;
 extern TIM_HandleTypeDef htim9;
 /* USER CODE BEGIN EV */
@@ -202,6 +202,20 @@ void SysTick_Handler(void)
 /******************************************************************************/
 
 /**
+  * @brief This function handles DMA1 stream5 global interrupt.
+  */
+void DMA1_Stream5_IRQHandler(void)
+{
+  /* USER CODE BEGIN DMA1_Stream5_IRQn 0 */
+
+  /* USER CODE END DMA1_Stream5_IRQn 0 */
+  HAL_DMA_IRQHandler(&hdma_spi3_tx);
+  /* USER CODE BEGIN DMA1_Stream5_IRQn 1 */
+
+  /* USER CODE END DMA1_Stream5_IRQn 1 */
+}
+
+/**
   * @brief This function handles ADC1 global interrupt.
   */
 void ADC_IRQHandler(void)
@@ -225,7 +239,7 @@ void TIM1_BRK_TIM9_IRQHandler(void)
   /* USER CODE END TIM1_BRK_TIM9_IRQn 0 */
   HAL_TIM_IRQHandler(&htim9);
   /* USER CODE BEGIN TIM1_BRK_TIM9_IRQn 1 */
-HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_14); //rojo
+	HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_14); //rojo
   /* USER CODE END TIM1_BRK_TIM9_IRQn 1 */
 }
 
@@ -239,13 +253,7 @@ void TIM3_IRQHandler(void)
   /* USER CODE END TIM3_IRQn 0 */
   HAL_TIM_IRQHandler(&htim3);
   /* USER CODE BEGIN TIM3_IRQn 1 */
-	static int i=0;
-	i++;
-	if(i==32000)
-	{	
-		HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_12); // verde
-		i=0;
-	}	
+	
   /* USER CODE END TIM3_IRQn 1 */
 }
 
@@ -263,36 +271,7 @@ void DMA2_Stream0_IRQHandler(void)
   /* USER CODE END DMA2_Stream0_IRQn 1 */
 }
 
-/**
-  * @brief This function handles USB On The Go FS global interrupt.
-  */
-void OTG_FS_IRQHandler(void)
-{
-  /* USER CODE BEGIN OTG_FS_IRQn 0 */
-
-  /* USER CODE END OTG_FS_IRQn 0 */
-  HAL_HCD_IRQHandler(&hhcd_USB_OTG_FS);
-  /* USER CODE BEGIN OTG_FS_IRQn 1 */
-	
-  /* USER CODE END OTG_FS_IRQn 1 */
-}
-
 /* USER CODE BEGIN 1 */
 
-void HAL_ADC_ConvHalfCpltCallback (ADC_HandleTypeDef * hadc)
-{
-	//HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, GPIO_PIN_SET);
-}
-
-void HAL_ADC_ConvCpltCallback (ADC_HandleTypeDef * hadc)
-{
-	static int i=0;
-	i++;
-	if(i==250) 
-	{	
-		HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_15); // blue 
-		i=0;
-	}
-}
 /* USER CODE END 1 */
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

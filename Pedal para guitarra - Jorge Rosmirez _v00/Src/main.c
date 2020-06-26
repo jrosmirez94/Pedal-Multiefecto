@@ -24,9 +24,7 @@
 #include "dma.h"
 #include "i2c.h"
 #include "i2s.h"
-#include "spi.h"
 #include "tim.h"
-#include "usb_host.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -57,8 +55,6 @@
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
-void MX_USB_HOST_Process(void);
-
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -98,10 +94,7 @@ int main(void)
   MX_GPIO_Init();
   MX_DMA_Init();
   MX_I2C1_Init();
-  MX_I2S2_Init();
   MX_I2S3_Init();
-  MX_SPI1_Init();
-  MX_USB_HOST_Init();
   MX_TIM3_Init();
   MX_ADC1_Init();
   MX_TIM9_Init();
@@ -114,7 +107,6 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-   main_loop();
 
     /* USER CODE BEGIN 3 */
   }
