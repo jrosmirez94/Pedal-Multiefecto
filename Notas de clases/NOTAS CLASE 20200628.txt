@@ -1,0 +1,23 @@
+CLASE EFECTOS
+
+ADC
+Parameter Setting
+
+Me tengo que asegurar que mi Fs (32khz), sea mas chica que los 15 ciclos [segundos] que demore el ADC, y eso depende del clock del ADC (HOJA DE DATO)
+
+
+Memoria Flash (512K)
+RAM (128K)
+
+el tamaño del buffer que accede el DMA, se establece a prueba y error.
+no tiene sentido hablar de eficiencia porque me sobran recursos.
+
+el buffer de 2048 posiciones, esta alojado en la memoria flash, y utilizo el DMA para acceder (el DMA es una "mano" que agarra la muestra en la memoria flash y la pone en el DAC)
+
+cuando realizo la vinculacion del DMA con el I2S, estoy estableciendo la frecuencia de operacion seleccionada previamente por el I2S.
+
+el puntero del buffer (buffer_float), cuando apunta a un vector, indica que hay muestras para ser procedadas, cuando apunta a NULL, significa que no hay muestras para ser procesadas.
+este puntero es una variable global, porque voy a saber la posicion de memoria del vector que contiene las muetras para realizar el procesamiento de datos.
+
+
+

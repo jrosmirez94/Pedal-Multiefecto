@@ -161,6 +161,7 @@ void main_loop ()
 				}	
 				break;	
 		}	
+		transmit_ready=DMA_LOGIC_READY;
 	}	
 } // main_loop
 
@@ -174,9 +175,12 @@ void main_loop_end ()
 
 void main_loopback ()
 {
+	int i,j;
 	
-// utilizar el buffer float_dma y eliminar las muestras que tomo del pote
-	
+	for (i=0,j=0;i<DMA_HALF_SIZE *(CHANNELS_IN);i+=2,j++)
+	{
+		buffer_float [j]= buffer_float [i];		// utilizar el buffer float_dma y eliminar las muestras que tomo del pote
+	}
 }
 
 void main_eco ()

@@ -14,8 +14,8 @@
  ******************************************************************************/
 // tamanio de la mitad del buffer DMA para hacer ping pong
 #define DMA_HALF_SIZE 1024
-
-
+#define CHANNELS_IN 2
+#define CHANNELS_OUT 1
 
 
 
@@ -48,7 +48,7 @@ extern volatile float * buffer_float;
 /******************************************************************************
  *  								EXPORTED FUNCTIONS
  ******************************************************************************/
-void init_audio ();
+void init_audio (void);
 
 
 #endif // AUDIO_H_
