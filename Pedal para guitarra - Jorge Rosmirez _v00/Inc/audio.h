@@ -13,9 +13,9 @@
  *  								DEFINES
  ******************************************************************************/
 // tamanio de la mitad del buffer DMA para hacer ping pong
-#define DMA_HALF_SIZE 1024
+#define DMA_HALF_SIZE 2048
 #define CHANNELS_IN 2
-#define CHANNELS_OUT 1
+#define CHANNELS_OUT 2
 
 
 

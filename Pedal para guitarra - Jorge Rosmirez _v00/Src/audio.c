@@ -110,15 +110,32 @@ void HAL_ADC_ConvCpltCallback (ADC_HandleTypeDef * hadc)
 
 void HAL_I2S_TxHalfCpltCallback (I2S_HandleTypeDef * hi2s)
 {
-	if (transmit_ready == DMA_LOGIC_BUSY)
+	if (transmit_ready==DMA_LOGIC_BUSY)
 	{
 		memset (& _dma_out [0], 0, DMA_HALF_SIZE * CHANNELS_OUT); // si el buffer esta ocupado completas todo con 0´s para que a la salida no tenga ruido
+		HAL_GPIO_WritePin(GPIOD,GPIO_PIN_13,GPIO_PIN_SET);
 	}
 	else
-	{
+	{	
+	int i;
+		for(i=0;i<DMA_HALF_SIZE*CHANNELS_IN;i++)
+		{
+		_dma_float[i]=(arm_sin_f32(2*3.14159*i*20/2048))*0.00001;//(440*2*3.14159f*i*(1/32000.0f))*0.00001);
+		if(i%2)
+		{
+			_dma_float[i]=0;
+		}	
+		}
 		arm_float_to_q31 (_dma_float, & _dma_out [0], DMA_HALF_SIZE * CHANNELS_OUT);
 		buffer_float = NULL;
-
+/*
+		int i;
+		for(i=0;i<DMA_HALF_SIZE*CHANNELS_OUT;i++)
+		{
+		buffer_float[i]=arm_sin_q31(440*2*3.14159f*i*2147483648*(1/32000.0f))/4;
+		}
+		memcpy(&_dma_out[0],_dma_float,DMA_HALF_SIZE*sizeof(_dma_out[0]));
+*/
 		transmit_ready = DMA_DAC_READY;
 	}
 }
@@ -128,13 +145,30 @@ void HAL_I2S_TxCpltCallback (I2S_HandleTypeDef * hi2s)
 	if (transmit_ready == DMA_LOGIC_BUSY)
 	{
 		memset (& _dma_out [DMA_HALF_SIZE * CHANNELS_OUT], 0, DMA_HALF_SIZE * CHANNELS_OUT);
+		HAL_GPIO_WritePin(GPIOD,GPIO_PIN_13,GPIO_PIN_SET);
 	}
 	else
 	{
-		
+		int i;
+		for(i=0;i<DMA_HALF_SIZE*CHANNELS_IN;i++)
+		{
+		_dma_float[i]=(arm_sin_f32(2*3.14159*i*20/2048))*0.00001;//(440*2*3.14159f*i*(1/32000.0f))*0.00001);
+		if(i%2)
+		{
+			_dma_float[i]=0;
+		}	
+		}
 		arm_float_to_q31 (_dma_float, & _dma_out [DMA_HALF_SIZE * CHANNELS_OUT], DMA_HALF_SIZE * CHANNELS_OUT);
 		buffer_float = NULL;
-		
+
+/*		
+		int i;
+		for(i=0;i<DMA_HALF_SIZE*CHANNELS_OUT;i++)
+		{
+		buffer_float[i]=arm_sin_q31(440*2*3.14159f*i*2147483648*(1/32000.0f))/4;
+		}
+		memcpy(&_dma_out[DMA_HALF_SIZE],_dma_float,DMA_HALF_SIZE*sizeof(_dma_out[0]));
+*/
 		transmit_ready = DMA_DAC_READY;
 	}
 }

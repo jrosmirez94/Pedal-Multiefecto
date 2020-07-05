@@ -13,7 +13,9 @@ void CS43L22_transmit(uint8_t registro, uint8_t valor)
 }
 
 void CS43L22_init(void)
-{	
+{	HAL_GPIO_WritePin(Audio_RST_GPIO_Port,Audio_RST_Pin,GPIO_PIN_RESET);
+	HAL_Delay(500);
+	HAL_GPIO_WritePin(Audio_RST_GPIO_Port,Audio_RST_Pin,GPIO_PIN_SET);
 	/*Required Initialization Settings: inicializacion de DAC, datasheet pag 32*/
 	CS43L22_transmit(0x00,0x99);
 	CS43L22_transmit(0x47,0x80);

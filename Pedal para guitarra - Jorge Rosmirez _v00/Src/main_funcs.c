@@ -13,7 +13,7 @@
 #include "audio.h"
 // ARM includes
 // #include "arm_const_structs.h"
-// #include "arm_math.h"
+#include "arm_math.h"
 
 // Project includes
 // #include "audio.h"
@@ -79,9 +79,9 @@ static void main_wahwah (void);
  ******************************************************************************/
 void main_init ()
 {
+	HAL_Delay(200);
 	HAL_TIM_OC_Start_IT(&htim9, TIM_CHANNEL_1);
 	HAL_TIM_OC_Start_IT(&htim3, TIM_CHANNEL_1);
-	HAL_Delay(100);
 	init_audio ();
 	HAL_GPIO_WritePin(GPIOD,GPIO_PIN_12,GPIO_PIN_SET); // led verde
 	HAL_GPIO_WritePin(GPIOD,GPIO_PIN_13,GPIO_PIN_RESET); // led naranja
@@ -94,7 +94,7 @@ void main_loop ()
 	if(transmit_ready==DMA_ADC_READY)
 	{
 		transmit_ready=DMA_LOGIC_BUSY;
-		switch (estado)
+/*		switch (estado)
 		{
 			case estado_loopback:
 				main_loopback ();
@@ -160,7 +160,8 @@ void main_loop ()
 					HAL_GPIO_WritePin(GPIOD,GPIO_PIN_12,GPIO_PIN_SET); // led verde
 				}	
 				break;	
-		}	
+		}*/
+		
 		transmit_ready=DMA_LOGIC_READY;
 	}	
 } // main_loop
