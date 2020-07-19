@@ -38,8 +38,8 @@ typedef enum
 /******************************************************************************
  *  								EXPORTED VARIABLES
  ******************************************************************************/
-extern volatile DMA_FST_t transmit_ready;
-extern volatile float * buffer_float;
+extern DMA_FST_t transmit_ready;
+extern float * buffer_float;
 
 
 

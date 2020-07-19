@@ -29,7 +29,7 @@
  *  								DEFINES
  ******************************************************************************/
 
-#define CANT_PASOS 10
+#define CANT_PASOS 2
 
 
 typedef enum
@@ -62,8 +62,9 @@ extern ADC_HandleTypeDef hadc1;
  *  						LOCAL VARIABLES DECLARATION
  ******************************************************************************/
 static E_ESTADOS estado=estado_loopback;
-
-
+static float eco_all[DMA_HALF_SIZE*CHANNELS_IN*CANT_PASOS];
+static int eco_paso=0;
+static float pote;
 /******************************************************************************
  *  						LOCAL FORWARDS DECLARATIONS
  ******************************************************************************/
@@ -94,7 +95,8 @@ void main_loop ()
 	if(transmit_ready==DMA_ADC_READY)
 	{
 		transmit_ready=DMA_LOGIC_BUSY;
-/*		switch (estado)
+		main_loop_start ();
+		switch (estado)
 		{
 			case estado_loopback:
 				main_loopback ();
@@ -160,36 +162,43 @@ void main_loop ()
 					HAL_GPIO_WritePin(GPIOD,GPIO_PIN_12,GPIO_PIN_SET); // led verde
 				}	
 				break;	
-		}*/
-		
+		}
+		main_loop_end ();
 		transmit_ready=DMA_LOGIC_READY;
-	}	
+	}
 } // main_loop
 
 void main_loop_start ()
 {
+	arm_scale_f32(buffer_float,1,&eco_all[DMA_HALF_SIZE*CHANNELS_IN*eco_paso],DMA_HALF_SIZE*CHANNELS_IN);
+	pote=buffer_float[1];
 }
 
 void main_loop_end ()
 {
+	eco_paso++;
+	eco_paso%=CANT_PASOS;
 }
 
 void main_loopback ()
 {
-	int i,j;
+	int i;
 	
-	for (i=0,j=0;i<DMA_HALF_SIZE *(CHANNELS_IN);i+=2,j++)
+	for (i=0;i<DMA_HALF_SIZE *(CHANNELS_IN);i+=2)
 	{
-		buffer_float [j]= buffer_float [i];		// utilizar el buffer float_dma y eliminar las muestras que tomo del pote
+		buffer_float [i+1]= buffer_float [i];		// utilizar el buffer float_dma y eliminar las muestras que tomo del pote
 	}
 }
 
 void main_eco ()
 {
+	unsigned int paso_actual=(int)((pote*CANT_PASOS)*524383.848977451+eco_paso)%CANT_PASOS; 
+	arm_add_f32(buffer_float,&eco_all[DMA_HALF_SIZE*CHANNELS_IN*paso_actual],buffer_float,DMA_HALF_SIZE*CHANNELS_IN);
 }
 
 void main_fuzz ()
 {
+	
 }
 void main_wahwah ()
 {

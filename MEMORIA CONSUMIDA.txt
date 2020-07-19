@@ -1,0 +1,14 @@
+memoria flash 512k
+SRAM 128k
+
+eco_all 163840 bytes
+
+_dma_out 16768 bytes
+
+_dma_in 16768 bytes
+
+_dma_float 8384 bytes
+
+
+
+
