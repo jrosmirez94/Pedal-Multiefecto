@@ -32,7 +32,7 @@
  *  						GLOBAL VARIABLES DECLARATION
  ******************************************************************************/
 DMA_FST_t transmit_ready = DMA_INIT;
-float * buffer_float = NULL; // puntero que apunta el vector con las muetras a ser procesadas
+q31_t * buffer_DMA = NULL; // puntero que apunta el vector con las muetras a ser procesadas
 
 
 /******************************************************************************
@@ -49,8 +49,7 @@ float * buffer_float = NULL; // puntero que apunta el vector con las muetras a s
  ******************************************************************************/
 static q31_t   _dma_out   [DMA_HALF_SIZE * 2 * CHANNELS_OUT] = {0}; //salida
 static q31_t   _dma_in    [DMA_HALF_SIZE * 2 * CHANNELS_IN] = {0}; //entrada
-static float   _dma_float [DMA_HALF_SIZE * CHANNELS_IN]     = {0}; //conversion a float para procesar
-
+static q31_t   _dma_aux   [DMA_HALF_SIZE * 1 * CHANNELS_IN] = {0};
 /******************************************************************************
  *  						GLOBAL FUNCTIONS DEFINITION
  ******************************************************************************/
@@ -72,7 +71,7 @@ void init_audio ()
  *  						INTERRUPT HANDLERS
  ******************************************************************************/
 // not use __disable_irq() and __enable_irq() to do critical stuffs
-// put transmit_ready = HAL_TIMEOUT at finalize using buffer_float
+// put transmit_ready = HAL_TIMEOUT at finalize using buffer_DMA
 
 //**ADC**//
 
@@ -82,10 +81,10 @@ void HAL_ADC_ConvHalfCpltCallback (ADC_HandleTypeDef * hadc)
 	{
 	}
 	else
-	{
-		arm_q31_to_float (& _dma_in [0], _dma_float, DMA_HALF_SIZE * CHANNELS_IN); //conversion de formato q31 a float. Para realizar procesamiento de datos es conveniente hacerlo en formato float
-		buffer_float = _dma_float;																									 
-
+	{			
+		arm_shift_q31(&_dma_in[0],0,&_dma_aux[0],DMA_HALF_SIZE*CHANNELS_IN);
+		//arm_scale_q31(&_dma_in[0],0x7FFFFFFF,3,&_dma_aux[0],DMA_HALF_SIZE*CHANNELS_IN);
+		buffer_DMA=&_dma_aux[0];
 		transmit_ready = DMA_ADC_READY;		// hasta aca tengo la mitad del buffer lleno
 	}
 }
@@ -97,9 +96,9 @@ void HAL_ADC_ConvCpltCallback (ADC_HandleTypeDef * hadc)
 	}
 	else
 	{
-		arm_q31_to_float (& _dma_in [DMA_HALF_SIZE * CHANNELS_IN], _dma_float, DMA_HALF_SIZE * CHANNELS_IN);
-		buffer_float = _dma_float;
-
+		arm_shift_q31(&_dma_in[DMA_HALF_SIZE*CHANNELS_IN],0,&_dma_aux[0],DMA_HALF_SIZE*CHANNELS_IN);
+		//arm_scale_q31(&_dma_in[DMA_HALF_SIZE*CHANNELS_IN],0x7FFFFFFF,3,&_dma_aux[0],DMA_HALF_SIZE*CHANNELS_IN);
+		buffer_DMA=&_dma_aux[0];
 		transmit_ready = DMA_ADC_READY; // hasta aca se completó la otra mitad
 	}
 }
@@ -117,8 +116,10 @@ void HAL_I2S_TxHalfCpltCallback (I2S_HandleTypeDef * hi2s)
 	}
 	else
 	{	
-		arm_float_to_q31 (_dma_float, & _dma_out [0], DMA_HALF_SIZE * CHANNELS_OUT);
-		buffer_float = NULL;
+		HAL_GPIO_WritePin(GPIOD,GPIO_PIN_13,GPIO_PIN_RESET);
+		arm_shift_q31(&_dma_aux[0],0,&_dma_out[0],DMA_HALF_SIZE*CHANNELS_OUT);
+		//arm_scale_q31(&_dma_aux[0],0x7FFFFFFF,3,&_dma_out[0],DMA_HALF_SIZE*CHANNELS_OUT);
+		buffer_DMA=NULL; // una vez que trasmitis no es valido este puntero
 		transmit_ready = DMA_DAC_READY;
 	}
 }
@@ -132,8 +133,10 @@ void HAL_I2S_TxCpltCallback (I2S_HandleTypeDef * hi2s)
 	}
 	else
 	{
-		arm_float_to_q31 (_dma_float, & _dma_out [DMA_HALF_SIZE * CHANNELS_OUT], DMA_HALF_SIZE * CHANNELS_OUT);
-		buffer_float = NULL;
+		HAL_GPIO_WritePin(GPIOD,GPIO_PIN_13,GPIO_PIN_RESET);
+		arm_shift_q31(&_dma_aux[0],0,&_dma_out[DMA_HALF_SIZE*CHANNELS_OUT],DMA_HALF_SIZE*CHANNELS_OUT);
+		//arm_scale_q31(&_dma_aux[0],0x7FFFFFFF,3,&_dma_out[DMA_HALF_SIZE*CHANNELS_OUT],DMA_HALF_SIZE*CHANNELS_OUT);
+		buffer_DMA=NULL; 
 		transmit_ready = DMA_DAC_READY;
 	}
 }

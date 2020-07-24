@@ -62,9 +62,9 @@ extern ADC_HandleTypeDef hadc1;
  *  						LOCAL VARIABLES DECLARATION
  ******************************************************************************/
 static E_ESTADOS estado=estado_loopback;
-static float eco_all[DMA_HALF_SIZE*CHANNELS_IN*CANT_PASOS];
+static q31_t eco_all[DMA_HALF_SIZE*CHANNELS_IN*CANT_PASOS];
 static int eco_paso=0;
-static float pote;
+static q31_t pote;
 /******************************************************************************
  *  						LOCAL FORWARDS DECLARATIONS
  ******************************************************************************/
@@ -88,6 +88,7 @@ void main_init ()
 	HAL_GPIO_WritePin(GPIOD,GPIO_PIN_13,GPIO_PIN_RESET); // led naranja
 	HAL_GPIO_WritePin(GPIOD,GPIO_PIN_14,GPIO_PIN_RESET); // led rojo
 	HAL_GPIO_WritePin(GPIOD,GPIO_PIN_15,GPIO_PIN_RESET); // led azul
+	HAL_Delay(200);
 }
 
 void main_loop ()
@@ -170,8 +171,9 @@ void main_loop ()
 
 void main_loop_start ()
 {
-	arm_scale_f32(buffer_float,1,&eco_all[DMA_HALF_SIZE*CHANNELS_IN*eco_paso],DMA_HALF_SIZE*CHANNELS_IN);
-	pote=buffer_float[1];
+	arm_scale_q31(&buffer_DMA[0],0x7FFFFFFF,0,&eco_all[DMA_HALF_SIZE*CHANNELS_IN*eco_paso],DMA_HALF_SIZE*CHANNELS_IN);
+		
+	pote=buffer_DMA[1];
 }
 
 void main_loop_end ()
@@ -186,14 +188,14 @@ void main_loopback ()
 	
 	for (i=0;i<DMA_HALF_SIZE *(CHANNELS_IN);i+=2)
 	{
-		buffer_float [i+1]= buffer_float [i];		// utilizar el buffer float_dma y eliminar las muestras que tomo del pote
+		buffer_DMA [i+1]= buffer_DMA [i];		// utilizar el buffer buffer_DMA y eliminar las muestras que tomo del pote
 	}
 }
 
 void main_eco ()
 {
 	unsigned int paso_actual=(int)((pote*CANT_PASOS)*524383.848977451+eco_paso)%CANT_PASOS; 
-	arm_add_f32(buffer_float,&eco_all[DMA_HALF_SIZE*CHANNELS_IN*paso_actual],buffer_float,DMA_HALF_SIZE*CHANNELS_IN);
+	arm_add_q31(buffer_DMA,&eco_all[DMA_HALF_SIZE*CHANNELS_IN*paso_actual],buffer_DMA,DMA_HALF_SIZE*CHANNELS_IN);
 }
 
 void main_fuzz ()
