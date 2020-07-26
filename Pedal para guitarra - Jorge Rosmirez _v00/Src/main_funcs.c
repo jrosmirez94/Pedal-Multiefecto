@@ -10,14 +10,14 @@
  ******************************************************************************/
 // STM includes
 #include "tim.h"
-#include "audio.h"
+
 // ARM includes
 // #include "arm_const_structs.h"
 #include "arm_math.h"
 
 // Project includes
-// #include "audio.h"
-// #include "fuzz.h"
+#include "audio.h"
+#include "fuzz.h"
 // #include "wahwah.h"
 #include "CS43L22.h"
 
@@ -29,7 +29,7 @@
  *  								DEFINES
  ******************************************************************************/
 
-#define CANT_PASOS 2
+#define CANT_PASOS 10
 
 
 typedef enum
@@ -62,9 +62,9 @@ extern ADC_HandleTypeDef hadc1;
  *  						LOCAL VARIABLES DECLARATION
  ******************************************************************************/
 static E_ESTADOS estado=estado_loopback;
-static q31_t eco_all[DMA_HALF_SIZE*CHANNELS_IN*CANT_PASOS];
+static q15_t eco_all[DMA_HALF_SIZE*CHANNELS_IN*CANT_PASOS]; //__attribute__ ((section (".data")))
 static int eco_paso=0;
-static q31_t pote;
+static q15_t pote;
 /******************************************************************************
  *  						LOCAL FORWARDS DECLARATIONS
  ******************************************************************************/
@@ -171,7 +171,15 @@ void main_loop ()
 
 void main_loop_start ()
 {
-	arm_scale_q31(&buffer_DMA[0],0x7FFFFFFF,0,&eco_all[DMA_HALF_SIZE*CHANNELS_IN*eco_paso],DMA_HALF_SIZE*CHANNELS_IN);
+	int i;
+	
+	for (i=0;i<DMA_HALF_SIZE *(CHANNELS_IN);i+=2)
+	{
+		buffer_DMA [i+1]= buffer_DMA [i];		// utilizar el buffer buffer_DMA y eliminar las muestras que tomo del pote
+	}
+	
+	arm_shift_q15(&buffer_DMA[0],0,&eco_all[DMA_HALF_SIZE*CHANNELS_IN*eco_paso],DMA_HALF_SIZE*CHANNELS_IN);
+	//arm_scale_q31(&buffer_DMA[0],0x7FFFFFFF,0,&eco_all[DMA_HALF_SIZE*CHANNELS_IN*eco_paso],DMA_HALF_SIZE*CHANNELS_IN);
 		
 	pote=buffer_DMA[1];
 }
@@ -184,23 +192,24 @@ void main_loop_end ()
 
 void main_loopback ()
 {
-	int i;
 	
-	for (i=0;i<DMA_HALF_SIZE *(CHANNELS_IN);i+=2)
-	{
-		buffer_DMA [i+1]= buffer_DMA [i];		// utilizar el buffer buffer_DMA y eliminar las muestras que tomo del pote
-	}
 }
+unsigned int paso_actual;
 
 void main_eco ()
 {
-	unsigned int paso_actual=(int)((pote*CANT_PASOS)*524383.848977451+eco_paso)%CANT_PASOS; 
-	arm_add_q31(buffer_DMA,&eco_all[DMA_HALF_SIZE*CHANNELS_IN*paso_actual],buffer_DMA,DMA_HALF_SIZE*CHANNELS_IN);
+	paso_actual=(int)(((pote*CANT_PASOS)>>12)+eco_paso)%CANT_PASOS; // 524383.848977451
+	arm_add_q15(buffer_DMA,&eco_all[DMA_HALF_SIZE*CHANNELS_IN*paso_actual],buffer_DMA,DMA_HALF_SIZE*CHANNELS_IN);
 }
 
 void main_fuzz ()
 {
+	int i;
 	
+	for(i=0;i<DMA_HALF_SIZE*CHANNELS_IN;i++)
+	{
+		buffer_DMA[i]=fuzz(buffer_DMA[i]);	
+	}
 }
 void main_wahwah ()
 {

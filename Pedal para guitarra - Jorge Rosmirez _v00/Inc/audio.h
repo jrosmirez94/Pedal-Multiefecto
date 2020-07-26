@@ -39,7 +39,7 @@ typedef enum
  *  								EXPORTED VARIABLES
  ******************************************************************************/
 extern DMA_FST_t transmit_ready;
-extern q31_t * buffer_DMA;
+extern q15_t * buffer_DMA;
 
 
 
