@@ -29,7 +29,7 @@
  *  								DEFINES
  ******************************************************************************/
 
-#define CANT_PASOS 10
+#define CANT_PASOS 9
 
 
 typedef enum
@@ -57,7 +57,6 @@ extern TIM_HandleTypeDef htim3;
 extern TIM_HandleTypeDef htim9;
 extern ADC_HandleTypeDef hadc1;
 
-
 /******************************************************************************
  *  						LOCAL VARIABLES DECLARATION
  ******************************************************************************/
@@ -65,6 +64,7 @@ static E_ESTADOS estado=estado_loopback;
 static q15_t eco_all[DMA_HALF_SIZE*CHANNELS_IN*CANT_PASOS]; //__attribute__ ((section (".data")))
 static int eco_paso=0;
 static q15_t pote;
+static q15_t nivelacion [DMA_HALF_SIZE*CHANNELS_IN];
 /******************************************************************************
  *  						LOCAL FORWARDS DECLARATIONS
  ******************************************************************************/
@@ -84,11 +84,16 @@ void main_init ()
 	HAL_TIM_OC_Start_IT(&htim9, TIM_CHANNEL_1);
 	HAL_TIM_OC_Start_IT(&htim3, TIM_CHANNEL_1);
 	init_audio ();
-	HAL_GPIO_WritePin(GPIOD,GPIO_PIN_12,GPIO_PIN_SET); // led verde
+	HAL_GPIO_WritePin(GPIOD,GPIO_PIN_12,GPIO_PIN_SET);   // led verde
 	HAL_GPIO_WritePin(GPIOD,GPIO_PIN_13,GPIO_PIN_RESET); // led naranja
 	HAL_GPIO_WritePin(GPIOD,GPIO_PIN_14,GPIO_PIN_RESET); // led rojo
 	HAL_GPIO_WritePin(GPIOD,GPIO_PIN_15,GPIO_PIN_RESET); // led azul
 	HAL_Delay(200);
+	int i;
+	for(i=0;i<DMA_HALF_SIZE*CHANNELS_IN;i++)
+	{
+		nivelacion[i]=0x0800;
+	}
 }
 
 void main_loop ()
@@ -171,17 +176,23 @@ void main_loop ()
 
 void main_loop_start ()
 {
+	
 	int i;
+	
+	pote=buffer_DMA[1];
 	
 	for (i=0;i<DMA_HALF_SIZE *(CHANNELS_IN);i+=2)
 	{
 		buffer_DMA [i+1]= buffer_DMA [i];		// utilizar el buffer buffer_DMA y eliminar las muestras que tomo del pote
 	}
 	
+	arm_shift_q15(&buffer_DMA[0],3,&buffer_DMA[0],DMA_HALF_SIZE*CHANNELS_IN);
+
 	arm_shift_q15(&buffer_DMA[0],0,&eco_all[DMA_HALF_SIZE*CHANNELS_IN*eco_paso],DMA_HALF_SIZE*CHANNELS_IN);
 	//arm_scale_q31(&buffer_DMA[0],0x7FFFFFFF,0,&eco_all[DMA_HALF_SIZE*CHANNELS_IN*eco_paso],DMA_HALF_SIZE*CHANNELS_IN);
 		
-	pote=buffer_DMA[1];
+	arm_sub_q15(buffer_DMA, nivelacion, buffer_DMA, DMA_HALF_SIZE*CHANNELS_IN);
+	
 }
 
 void main_loop_end ()
