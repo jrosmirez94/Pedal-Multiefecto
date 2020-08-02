@@ -29,7 +29,7 @@
  *  								DEFINES
  ******************************************************************************/
 
-#define CANT_PASOS 9
+#define CANT_PASOS 8
 
 
 typedef enum
@@ -64,7 +64,8 @@ static E_ESTADOS estado=estado_loopback;
 static q15_t eco_all[DMA_HALF_SIZE*CHANNELS_IN*CANT_PASOS]; //__attribute__ ((section (".data")))
 static int eco_paso=0;
 static q15_t pote;
-static q15_t nivelacion [DMA_HALF_SIZE*CHANNELS_IN];
+static q15_t nivelacion_in [DMA_HALF_SIZE*CHANNELS_IN];
+static q15_t nivelacion_out [DMA_HALF_SIZE*CHANNELS_OUT];
 /******************************************************************************
  *  						LOCAL FORWARDS DECLARATIONS
  ******************************************************************************/
@@ -92,8 +93,14 @@ void main_init ()
 	int i;
 	for(i=0;i<DMA_HALF_SIZE*CHANNELS_IN;i++)
 	{
-		nivelacion[i]=0x0800;
+		nivelacion_in[i]=0x0800;
 	}
+	
+	for(i=0;i<DMA_HALF_SIZE*CHANNELS_IN;i++)
+	{
+		nivelacion_out[i]=0x4000;
+	}
+	
 }
 
 void main_loop ()
@@ -176,7 +183,6 @@ void main_loop ()
 
 void main_loop_start ()
 {
-	
 	int i;
 	
 	pote=buffer_DMA[1];
@@ -186,19 +192,19 @@ void main_loop_start ()
 		buffer_DMA [i+1]= buffer_DMA [i];		// utilizar el buffer buffer_DMA y eliminar las muestras que tomo del pote
 	}
 	
+	arm_sub_q15(buffer_DMA, nivelacion_in, buffer_DMA, DMA_HALF_SIZE*CHANNELS_IN);
 	arm_shift_q15(&buffer_DMA[0],3,&buffer_DMA[0],DMA_HALF_SIZE*CHANNELS_IN);
 
 	arm_shift_q15(&buffer_DMA[0],0,&eco_all[DMA_HALF_SIZE*CHANNELS_IN*eco_paso],DMA_HALF_SIZE*CHANNELS_IN);
 	//arm_scale_q31(&buffer_DMA[0],0x7FFFFFFF,0,&eco_all[DMA_HALF_SIZE*CHANNELS_IN*eco_paso],DMA_HALF_SIZE*CHANNELS_IN);
 		
-	arm_sub_q15(buffer_DMA, nivelacion, buffer_DMA, DMA_HALF_SIZE*CHANNELS_IN);
-	
 }
 
 void main_loop_end ()
 {
 	eco_paso++;
 	eco_paso%=CANT_PASOS;
+	arm_add_q15(buffer_DMA, nivelacion_out, buffer_DMA, DMA_HALF_SIZE*CHANNELS_IN);
 }
 
 void main_loopback ()
@@ -219,7 +225,7 @@ void main_fuzz ()
 	
 	for(i=0;i<DMA_HALF_SIZE*CHANNELS_IN;i++)
 	{
-		buffer_DMA[i]=fuzz(buffer_DMA[i]);	
+		buffer_DMA[i]=fuzz(buffer_DMA[i],pote);	
 	}
 }
 void main_wahwah ()
