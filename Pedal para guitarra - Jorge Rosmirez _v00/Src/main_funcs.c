@@ -18,7 +18,7 @@
 // Project includes
 #include "audio.h"
 #include "fuzz.h"
-// #include "wahwah.h"
+#include "wahwah.h"
 #include "CS43L22.h"
 
 
@@ -66,6 +66,7 @@ static int eco_paso=0;
 static q15_t pote;
 static q15_t nivelacion_in [DMA_HALF_SIZE*CHANNELS_IN];
 static q15_t nivelacion_out [DMA_HALF_SIZE*CHANNELS_OUT];
+static q15_t *wahwah_in;
 /******************************************************************************
  *  						LOCAL FORWARDS DECLARATIONS
  ******************************************************************************/
@@ -100,6 +101,8 @@ void main_init ()
 	{
 		nivelacion_out[i]=0x4000;
 	}
+	
+	wahwah_init ();
 	
 }
 
@@ -197,13 +200,14 @@ void main_loop_start ()
 
 	arm_shift_q15(&buffer_DMA[0],0,&eco_all[DMA_HALF_SIZE*CHANNELS_IN*eco_paso],DMA_HALF_SIZE*CHANNELS_IN);
 	//arm_scale_q31(&buffer_DMA[0],0x7FFFFFFF,0,&eco_all[DMA_HALF_SIZE*CHANNELS_IN*eco_paso],DMA_HALF_SIZE*CHANNELS_IN);
-		
+	wahwah_in=&eco_all[DMA_HALF_SIZE*CHANNELS_IN*eco_paso];
 }
 
 void main_loop_end ()
 {
 	eco_paso++;
-	eco_paso%=CANT_PASOS;
+	eco_paso=eco_paso>=CANT_PASOS?eco_paso-CANT_PASOS:eco_paso;
+	//eco_paso%=CANT_PASOS;
 	arm_add_q15(buffer_DMA, nivelacion_out, buffer_DMA, DMA_HALF_SIZE*CHANNELS_IN);
 }
 
@@ -230,6 +234,8 @@ void main_fuzz ()
 }
 void main_wahwah ()
 {
+		uint32_t wah=1;
+		wahwah (wahwah_in, buffer_DMA, DMA_HALF_SIZE*CHANNELS_IN, wah);
 }
 
 
