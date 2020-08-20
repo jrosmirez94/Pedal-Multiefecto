@@ -6,4 +6,17 @@ git add --all
 git commit -m "mensaje"
 git push
 
+-----------------------------------------------------------------
+COMO VOLVER A UN COMMIT ANTERIOR
 
+cerrar el keil
+cd home/jrosmirez94/Pedal-Multiefecto
+git log (copiar codigo)
+git reset --hard
+git checkout [codigo]
+
+COMO VOLVER AL COMMIT ULTIMO
+cerrar el keil
+cd home/jrosmirez94/Pedal-Multiefecto
+git reset --hard
+git checkout master
