@@ -198,7 +198,7 @@ void main_loop_start ()
 	arm_sub_q15(buffer_DMA, nivelacion_in, buffer_DMA, DMA_HALF_SIZE*CHANNELS_IN);
 	arm_shift_q15(&buffer_DMA[0],3,&buffer_DMA[0],DMA_HALF_SIZE*CHANNELS_IN);
 
-	arm_shift_q15(&buffer_DMA[0],0,&eco_all[DMA_HALF_SIZE*CHANNELS_IN*eco_paso],DMA_HALF_SIZE*CHANNELS_IN);
+	arm_shift_q15(&buffer_DMA[0],-3,&eco_all[DMA_HALF_SIZE*CHANNELS_IN*eco_paso],DMA_HALF_SIZE*CHANNELS_IN);
 	//arm_scale_q31(&buffer_DMA[0],0x7FFFFFFF,0,&eco_all[DMA_HALF_SIZE*CHANNELS_IN*eco_paso],DMA_HALF_SIZE*CHANNELS_IN);
 	wahwah_in=&eco_all[DMA_HALF_SIZE*CHANNELS_IN*eco_paso];
 }

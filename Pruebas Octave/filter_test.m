@@ -1,4 +1,4 @@
-fs = 48000; %sampling frequency
+fs = 32000; %sampling frequency
 f0 = 600;
 gain =10; %10 dB
 Q = 1;
