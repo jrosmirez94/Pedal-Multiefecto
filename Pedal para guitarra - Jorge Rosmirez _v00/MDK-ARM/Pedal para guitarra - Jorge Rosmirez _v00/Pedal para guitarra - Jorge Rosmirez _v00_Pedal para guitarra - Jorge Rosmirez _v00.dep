@@ -1,9 +1,9 @@
 Dependencies for Project 'Pedal para guitarra - Jorge Rosmirez _v00', Target 'Pedal para guitarra - Jorge Rosmirez _v00': (DO NOT MODIFY !)
-F (startup_stm32f411xe.s)(0x5F482C6B)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork --pd "__MICROLIB SETA 1"-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include--pd "__UVISION_VERSION SETA 520" --pd "_RTE_ SETA 1" --pd "STM32F411xE SETA 1"--list startup_stm32f411xe.lst --xref -o "pedal para guitarra - jorge rosmirez _v00\startup_stm32f411xe.o" --depend "pedal para guitarra - jorge rosmirez _v00\startup_stm32f411xe.d")
+F (startup_stm32f411xe.s)(0x5F4BF75D)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork --pd "__MICROLIB SETA 1"-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include--pd "__UVISION_VERSION SETA 520" --pd "_RTE_ SETA 1" --pd "STM32F411xE SETA 1"--list startup_stm32f411xe.lst --xref -o "pedal para guitarra - jorge rosmirez _v00\startup_stm32f411xe.o" --depend "pedal para guitarra - jorge rosmirez _v00\startup_stm32f411xe.d")
 F (..\Src\CS43L22.c)(0x5F02462E)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\cs43l22.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\cs43l22.crf" --depend "pedal para guitarra - jorge rosmirez _v00\cs43l22.d")
-I (../Inc/main.h)(0x5F482C66)
+I (../Inc/main.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -38,11 +38,11 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5EAF3954)
 I (../Inc/CS43l22.h)(0x5EB86989)
-F (..\Src\main_funcs.c)(0x5F483D82)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\main_funcs.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\main_funcs.crf" --depend "pedal para guitarra - jorge rosmirez _v00\main_funcs.d")
-I (../Inc/tim.h)(0x5F482C64)
-I (../Inc/main.h)(0x5F482C66)
+F (..\Src\main_funcs.c)(0x5F4C2AFB)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\main_funcs.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\main_funcs.crf" --depend "pedal para guitarra - jorge rosmirez _v00\main_funcs.d")
+I (../Inc/tim.h)(0x5F4BF755)
+I (../Inc/main.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -84,9 +84,9 @@ I (../Inc/fuzz.h)(0x5F3EFF4E)
 I (../Inc/wahwah.h)(0x5F3EFF4E)
 I (../Inc/CS43L22.h)(0x5EB86989)
 F (..\Src\audio.c)(0x5F1DF71E)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\audio.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\audio.crf" --depend "pedal para guitarra - jorge rosmirez _v00\audio.d")
-I (../Inc/main.h)(0x5F482C66)
+I (../Inc/main.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -120,10 +120,10 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5EAF3953)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5EAF3954)
-I (../Inc/adc.h)(0x5F482C61)
-I (../Inc/i2c.h)(0x5F482C62)
-I (../Inc/i2s.h)(0x5F482C63)
-I (../Inc/stm32f4xx_it.h)(0x5F482C65)
+I (../Inc/adc.h)(0x5F4BF753)
+I (../Inc/i2c.h)(0x5F4BF754)
+I (../Inc/i2s.h)(0x5F4BF755)
+I (../Inc/stm32f4xx_it.h)(0x5F4BF756)
 I (..\Drivers\CMSIS\DSP\Include\arm_math.h)(0x5EAF3948)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x56FEDD8E)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x56FEDD86)
@@ -132,9 +132,9 @@ I (../Inc/CS43L22.h)(0x5EB86989)
 F (..\Drivers\CMSIS\Lib\ARM\arm_cortexM4lf_math.lib)(0x5EAF3950)()
 F (..\Src\fuzz.c)(0x5F3EFF50)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\fuzz.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\fuzz.crf" --depend "pedal para guitarra - jorge rosmirez _v00\fuzz.d")
 I (../Inc/fuzz.h)(0x5F3EFF4E)
-I (../Inc/main.h)(0x5F482C66)
+I (../Inc/main.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -171,10 +171,10 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5EAF3954)
 I (..\Drivers\CMSIS\DSP\Include\arm_math.h)(0x5EAF3948)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x56FEDD8E)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x56FEDD86)
-F (..\Src\wahwah.c)(0x5F484197)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\wahwah.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\wahwah.crf" --depend "pedal para guitarra - jorge rosmirez _v00\wahwah.d")
-I (../Inc/main.h)(0x5F482C66)
+F (..\Src\wahwah.c)(0x5F4C2D9F)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\wahwah.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\wahwah.crf" --depend "pedal para guitarra - jorge rosmirez _v00\wahwah.d")
+I (../Inc/main.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -214,10 +214,10 @@ I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x56FEDD8E)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x56FEDD86)
 I (..\Drivers\CMSIS\DSP\Include\arm_common_tables.h)(0x5EAF3948)
 I (../Inc/wahwah.h)(0x5F3EFF4E)
-F (../Src/main.c)(0x5F482C66)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\main.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\main.crf" --depend "pedal para guitarra - jorge rosmirez _v00\main.d")
-I (../Inc/main.h)(0x5F482C66)
+F (../Src/main.c)(0x5F4BF758)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\main.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\main.crf" --depend "pedal para guitarra - jorge rosmirez _v00\main.d")
+I (../Inc/main.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -251,19 +251,19 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5EAF3953)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5EAF3954)
-I (../Inc/adc.h)(0x5F482C61)
-I (../Inc/dma.h)(0x5F482C62)
-I (../Inc/i2c.h)(0x5F482C62)
-I (../Inc/i2s.h)(0x5F482C63)
-I (../Inc/tim.h)(0x5F482C64)
-I (../Inc/gpio.h)(0x5F482C5F)
+I (../Inc/adc.h)(0x5F4BF753)
+I (../Inc/dma.h)(0x5F4BF754)
+I (../Inc/i2c.h)(0x5F4BF754)
+I (../Inc/i2s.h)(0x5F4BF755)
+I (../Inc/tim.h)(0x5F4BF755)
+I (../Inc/gpio.h)(0x5F4BF752)
 I (../Inc/CS43L22.h)(0x5EB86989)
 I (../Inc/main_funcs.h)(0x5EF90FF5)
-F (../Src/gpio.c)(0x5F482C5E)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\gpio.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\gpio.crf" --depend "pedal para guitarra - jorge rosmirez _v00\gpio.d")
-I (../Inc/gpio.h)(0x5F482C5F)
-I (../Inc/main.h)(0x5F482C66)
+F (../Src/gpio.c)(0x5F4BF751)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\gpio.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\gpio.crf" --depend "pedal para guitarra - jorge rosmirez _v00\gpio.d")
+I (../Inc/gpio.h)(0x5F4BF752)
+I (../Inc/main.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -297,11 +297,11 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5EAF3953)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5EAF3954)
-F (../Src/adc.c)(0x5F482C60)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\adc.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\adc.crf" --depend "pedal para guitarra - jorge rosmirez _v00\adc.d")
-I (../Inc/adc.h)(0x5F482C61)
-I (../Inc/main.h)(0x5F482C66)
+F (../Src/adc.c)(0x5F4BF753)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\adc.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\adc.crf" --depend "pedal para guitarra - jorge rosmirez _v00\adc.d")
+I (../Inc/adc.h)(0x5F4BF753)
+I (../Inc/main.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -335,11 +335,11 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5EAF3953)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5EAF3954)
-F (../Src/dma.c)(0x5F482C61)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\dma.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\dma.crf" --depend "pedal para guitarra - jorge rosmirez _v00\dma.d")
-I (../Inc/dma.h)(0x5F482C62)
-I (../Inc/main.h)(0x5F482C66)
+F (../Src/dma.c)(0x5F4BF753)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\dma.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\dma.crf" --depend "pedal para guitarra - jorge rosmirez _v00\dma.d")
+I (../Inc/dma.h)(0x5F4BF754)
+I (../Inc/main.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -373,11 +373,11 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5EAF3953)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5EAF3954)
-F (../Src/i2c.c)(0x5F482C62)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\i2c.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\i2c.crf" --depend "pedal para guitarra - jorge rosmirez _v00\i2c.d")
-I (../Inc/i2c.h)(0x5F482C62)
-I (../Inc/main.h)(0x5F482C66)
+F (../Src/i2c.c)(0x5F4BF754)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\i2c.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\i2c.crf" --depend "pedal para guitarra - jorge rosmirez _v00\i2c.d")
+I (../Inc/i2c.h)(0x5F4BF754)
+I (../Inc/main.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -411,11 +411,11 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5EAF3953)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5EAF3954)
-F (../Src/i2s.c)(0x5F482C63)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\i2s.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\i2s.crf" --depend "pedal para guitarra - jorge rosmirez _v00\i2s.d")
-I (../Inc/i2s.h)(0x5F482C63)
-I (../Inc/main.h)(0x5F482C66)
+F (../Src/i2s.c)(0x5F4BF755)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\i2s.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\i2s.crf" --depend "pedal para guitarra - jorge rosmirez _v00\i2s.d")
+I (../Inc/i2s.h)(0x5F4BF755)
+I (../Inc/main.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -449,11 +449,11 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5EAF3953)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5EAF3954)
-F (../Src/tim.c)(0x5F482C63)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\tim.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\tim.crf" --depend "pedal para guitarra - jorge rosmirez _v00\tim.d")
-I (../Inc/tim.h)(0x5F482C64)
-I (../Inc/main.h)(0x5F482C66)
+F (../Src/tim.c)(0x5F4BF755)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\tim.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\tim.crf" --depend "pedal para guitarra - jorge rosmirez _v00\tim.d")
+I (../Inc/tim.h)(0x5F4BF755)
+I (../Inc/main.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -487,10 +487,10 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5EAF3953)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5EAF3954)
-F (../Src/stm32f4xx_it.c)(0x5F482C64)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_it.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_it.crf" --depend "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_it.d")
-I (../Inc/main.h)(0x5F482C66)
+F (../Src/stm32f4xx_it.c)(0x5F4BF756)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_it.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_it.crf" --depend "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_it.d")
+I (../Inc/main.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -524,11 +524,11 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5EAF3953)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5EAF3954)
-I (../Inc/stm32f4xx_it.h)(0x5F482C65)
-F (../Src/stm32f4xx_hal_msp.c)(0x5F482C65)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_msp.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_msp.crf" --depend "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_msp.d")
-I (../Inc/main.h)(0x5F482C66)
+I (../Inc/stm32f4xx_it.h)(0x5F4BF756)
+F (../Src/stm32f4xx_hal_msp.c)(0x5F4BF756)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_msp.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_msp.crf" --depend "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_msp.d")
+I (../Inc/main.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -564,7 +564,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5EAF3954)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c)(0x5EAF3955)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_adc.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_adc.crf" --depend "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_adc.d")
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -600,7 +600,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5EAF3954)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c)(0x5EAF3955)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_adc_ex.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_adc_ex.crf" --depend "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_adc_ex.d")
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -636,7 +636,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5EAF3954)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c)(0x5EAF3956)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_rcc.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_rcc.crf" --depend "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_rcc.d")
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -672,7 +672,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5EAF3954)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c)(0x5EAF3956)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_rcc_ex.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_rcc_ex.crf" --depend "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_rcc_ex.d")
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -708,7 +708,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5EAF3954)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c)(0x5EAF3955)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_flash.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_flash.crf" --depend "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_flash.d")
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -744,7 +744,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5EAF3954)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c)(0x5EAF3955)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_flash_ex.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_flash_ex.crf" --depend "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_flash_ex.d")
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -780,7 +780,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5EAF3954)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c)(0x5EAF3955)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_flash_ramfunc.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_flash_ramfunc.crf" --depend "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_flash_ramfunc.d")
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -816,7 +816,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5EAF3954)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c)(0x5EAF3955)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_gpio.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_gpio.crf" --depend "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_gpio.d")
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -852,7 +852,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5EAF3954)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c)(0x5EAF3955)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_dma_ex.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_dma_ex.crf" --depend "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_dma_ex.d")
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -888,7 +888,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5EAF3954)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c)(0x5EAF3955)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_dma.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_dma.crf" --depend "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_dma.d")
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -924,7 +924,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5EAF3954)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c)(0x5EAF3956)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_pwr.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_pwr.crf" --depend "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_pwr.d")
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -960,7 +960,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5EAF3954)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c)(0x5EAF3956)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_pwr_ex.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_pwr_ex.crf" --depend "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_pwr_ex.d")
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -996,7 +996,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5EAF3954)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c)(0x5EAF3955)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_cortex.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_cortex.crf" --depend "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_cortex.d")
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -1032,7 +1032,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5EAF3954)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c)(0x5EAF3955)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal.crf" --depend "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal.d")
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -1068,7 +1068,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5EAF3954)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c)(0x5EAF3955)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_exti.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_exti.crf" --depend "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_exti.d")
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -1104,7 +1104,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5EAF3954)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c)(0x5EAF3955)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_i2c.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_i2c.crf" --depend "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_i2c.d")
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -1140,7 +1140,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5EAF3954)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c)(0x5EAF3955)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_i2c_ex.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_i2c_ex.crf" --depend "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_i2c_ex.d")
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -1176,7 +1176,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5EAF3954)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c)(0x5EAF3955)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_i2s.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_i2s.crf" --depend "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_i2s.d")
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -1212,7 +1212,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5EAF3954)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c)(0x5EAF3955)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_i2s_ex.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_i2s_ex.crf" --depend "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_i2s_ex.d")
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -1248,7 +1248,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5EAF3954)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c)(0x5EAF3957)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_tim.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_tim.crf" --depend "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_tim.d")
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -1284,7 +1284,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5EAF3954)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c)(0x5EAF3957)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Drivers\CMSIS\DSP\Include-I "C:\Users\jrosmirez\Desktop\PortableGit\home\jrosmirez94\Pedal-Multiefecto\Pedal para guitarra - Jorge Rosmirez _v00\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F411xE -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32F411xE -DUSE_HAL_DRIVER-o "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_tim_ex.o" --omf_browse "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_tim_ex.crf" --depend "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_tim_ex.d")
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5EAF38C6)
@@ -1329,7 +1329,7 @@ I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5EAF394F)
 I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x5EAF394F)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h)(0x5EAF38C6)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5EAF3952)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5F482C65)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5F4BF757)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5EAF3954)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5EAF3953)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5EAF3952)
