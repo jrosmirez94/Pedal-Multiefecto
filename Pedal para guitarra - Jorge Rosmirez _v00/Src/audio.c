@@ -116,9 +116,7 @@ void HAL_I2S_TxHalfCpltCallback (I2S_HandleTypeDef * hi2s)
 	}
 	else
 	{	
-		//HAL_GPIO_WritePin(GPIOD,GPIO_PIN_13,GPIO_PIN_RESET);
 		arm_shift_q15(&_dma_aux[0],0,&_dma_out[0],DMA_HALF_SIZE*CHANNELS_OUT);
-		//arm_scale_q31(&_dma_aux[0],0x7FFFFFFF,3,&_dma_out[0],DMA_HALF_SIZE*CHANNELS_OUT);
 		buffer_DMA=NULL; // una vez que trasmitis no es valido este puntero
 		transmit_ready = DMA_DAC_READY;
 	}
@@ -133,9 +131,7 @@ void HAL_I2S_TxCpltCallback (I2S_HandleTypeDef * hi2s)
 	}
 	else
 	{
-		//HAL_GPIO_WritePin(GPIOD,GPIO_PIN_13,GPIO_PIN_RESET);
 		arm_shift_q15(&_dma_aux[0],0,&_dma_out[DMA_HALF_SIZE*CHANNELS_OUT],DMA_HALF_SIZE*CHANNELS_OUT);
-		//arm_scale_q31(&_dma_aux[0],0x7FFFFFFF,3,&_dma_out[DMA_HALF_SIZE*CHANNELS_OUT],DMA_HALF_SIZE*CHANNELS_OUT);
 		buffer_DMA=NULL; 
 		transmit_ready = DMA_DAC_READY;
 	}

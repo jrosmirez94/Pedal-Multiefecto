@@ -1,7 +1,7 @@
 [PreviousGenFiles]
-HeaderPath=C:/Users/jrosmirez/Desktop/PortableGit/home/jrosmirez94/Pedal-Multiefecto/Pedal para guitarra - Jorge Rosmirez _v00/Inc
+HeaderPath=C:/Users/Juan Rosmirez/Documents/Jorge/Home/Pedal-Multiefecto/Pedal para guitarra - Jorge Rosmirez _v00/Inc
 HeaderFiles=gpio.h;i2c.h;i2s.h;spi.h;usb_host.h;usbh_conf.h;usbh_platform.h;stm32f4xx_it.h;stm32f4xx_hal_conf.h;main.h;tim.h;adc.h;dma.h;
-SourcePath=C:/Users/jrosmirez/Desktop/PortableGit/home/jrosmirez94/Pedal-Multiefecto/Pedal para guitarra - Jorge Rosmirez _v00/Src
+SourcePath=C:/Users/Juan Rosmirez/Documents/Jorge/Home/Pedal-Multiefecto/Pedal para guitarra - Jorge Rosmirez _v00/Src
 SourceFiles=gpio.c;i2c.c;i2s.c;spi.c;usb_host.c;usbh_conf.c;usbh_platform.c;stm32f4xx_it.c;stm32f4xx_hal_msp.c;main.c;tim.c;adc.c;dma.c;
 
 [PreviousLibFiles]

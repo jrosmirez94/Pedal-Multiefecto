@@ -1,4 +1,4 @@
---cpu Cortex-M4.fp
+--cpu=Cortex-M4.fp
 "pedal para guitarra - jorge rosmirez _v00\startup_stm32f411xe.o"
 "pedal para guitarra - jorge rosmirez _v00\cs43l22.o"
 "pedal para guitarra - jorge rosmirez _v00\main_funcs.o"
@@ -38,6 +38,6 @@
 "pedal para guitarra - jorge rosmirez _v00\stm32f4xx_hal_tim_ex.o"
 "pedal para guitarra - jorge rosmirez _v00\system_stm32f4xx.o"
 --library_type=microlib --strict --scatter "Pedal para guitarra - Jorge Rosmirez _v00\Pedal para guitarra - Jorge Rosmirez _v00.sct"
---symbols --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--symbols --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list "Pedal para guitarra - Jorge Rosmirez _v00.map" -o "Pedal para guitarra - Jorge Rosmirez _v00\Pedal para guitarra - Jorge Rosmirez _v00.axf"

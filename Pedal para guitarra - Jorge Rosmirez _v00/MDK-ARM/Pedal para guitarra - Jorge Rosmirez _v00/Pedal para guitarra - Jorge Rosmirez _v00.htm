@@ -3,9 +3,9 @@
 <title>Static Call Graph - [Pedal para guitarra - Jorge Rosmirez _v00\Pedal para guitarra - Jorge Rosmirez _v00.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image Pedal para guitarra - Jorge Rosmirez _v00\Pedal para guitarra - Jorge Rosmirez _v00.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060183: Last Updated: Sun Aug 30 19:52:24 2020
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sun Sep 06 19:46:38 2020
 <BR><P>
-<H3>Maximum Stack Usage =        320 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        328 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 main &rArr; main_init &rArr; wahwah_init &rArr; filter_calculate &rArr; __hardfp_sin &rArr; __ieee754_rem_pio2 &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
 <P>
@@ -319,18 +319,18 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_loop_start
 </UL>
 
-<P><STRONG><a name="[d6]"></a>arm_biquad_cascade_df1_fast_q15</STRONG> (Thumb, 222 bytes, Stack size 60 bytes, arm_biquad_cascade_df1_fast_q15.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = arm_biquad_cascade_df1_fast_q15
-</UL>
-<BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wahwah
-</UL>
-
 <P><STRONG><a name="[51]"></a>arm_biquad_cascade_df1_init_q15</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, arm_biquad_cascade_df1_init_q15.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = arm_biquad_cascade_df1_init_q15
 </UL>
 <BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wahwah_init
+</UL>
+
+<P><STRONG><a name="[d6]"></a>arm_biquad_cascade_df1_q15</STRONG> (Thumb, 230 bytes, Stack size 64 bytes, arm_biquad_cascade_df1_q15.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = arm_biquad_cascade_df1_q15
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wahwah
 </UL>
 
 <P><STRONG><a name="[53]"></a>__aeabi_uldivmod</STRONG> (Thumb, 98 bytes, Stack size 40 bytes, uldiv.o(.text))
@@ -1279,7 +1279,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ieee754_rem_pio2
 </UL>
 
-<P><STRONG><a name="[c7]"></a>filter_calculate</STRONG> (Thumb, 650 bytes, Stack size 32 bytes, wahwah.o(i.filter_calculate))
+<P><STRONG><a name="[c7]"></a>filter_calculate</STRONG> (Thumb, 634 bytes, Stack size 32 bytes, wahwah.o(i.filter_calculate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 272<LI>Call Chain = filter_calculate &rArr; __hardfp_sin &rArr; __ieee754_rem_pio2 &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
@@ -1309,7 +1309,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[44]"></a>main</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, main.o(i.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 320<LI>Call Chain = main &rArr; main_init &rArr; wahwah_init &rArr; filter_calculate &rArr; __hardfp_sin &rArr; __ieee754_rem_pio2 &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
+<BR><BR>[Stack]<UL><LI>Max Depth = 328<LI>Call Chain = main &rArr; main_init &rArr; wahwah_init &rArr; filter_calculate &rArr; __hardfp_sin &rArr; __ieee754_rem_pio2 &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM9_Init
 <LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM3_Init
@@ -1326,7 +1326,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
 <P><STRONG><a name="[ca]"></a>main_init</STRONG> (Thumb, 122 bytes, Stack size 16 bytes, main_funcs.o(i.main_init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 320<LI>Call Chain = main_init &rArr; wahwah_init &rArr; filter_calculate &rArr; __hardfp_sin &rArr; __ieee754_rem_pio2 &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
+<BR><BR>[Stack]<UL><LI>Max Depth = 328<LI>Call Chain = main_init &rArr; wahwah_init &rArr; filter_calculate &rArr; __hardfp_sin &rArr; __ieee754_rem_pio2 &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wahwah_init
 <LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_audio
@@ -1338,7 +1338,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[cb]"></a>main_loop</STRONG> (Thumb, 314 bytes, Stack size 40 bytes, main_funcs.o(i.main_loop))
-<BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = main_loop &rArr; main_wahwah &rArr; wahwah &rArr; arm_biquad_cascade_df1_fast_q15
+<BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = main_loop &rArr; main_wahwah &rArr; wahwah &rArr; arm_biquad_cascade_df1_q15
 </UL>
 <BR>[Calls]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arm_add_q15
 <LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_ReadPin
@@ -1352,15 +1352,15 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[d5]"></a>wahwah</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, wahwah.o(i.wahwah))
-<BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = wahwah &rArr; arm_biquad_cascade_df1_fast_q15
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = wahwah &rArr; arm_biquad_cascade_df1_q15
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arm_biquad_cascade_df1_fast_q15
+<BR>[Calls]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arm_biquad_cascade_df1_q15
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_wahwah
 </UL>
 
-<P><STRONG><a name="[d0]"></a>wahwah_init</STRONG> (Thumb, 84 bytes, Stack size 32 bytes, wahwah.o(i.wahwah_init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 304<LI>Call Chain = wahwah_init &rArr; filter_calculate &rArr; __hardfp_sin &rArr; __ieee754_rem_pio2 &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
+<P><STRONG><a name="[d0]"></a>wahwah_init</STRONG> (Thumb, 90 bytes, Stack size 40 bytes, wahwah.o(i.wahwah_init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 312<LI>Call Chain = wahwah_init &rArr; filter_calculate &rArr; __hardfp_sin &rArr; __ieee754_rem_pio2 &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arm_biquad_cascade_df1_init_q15
 <LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;filter_calculate
@@ -1387,7 +1387,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_loop
 </UL>
 
-<P><STRONG><a name="[d1]"></a>main_loop_start</STRONG> (Thumb, 90 bytes, Stack size 24 bytes, main_funcs.o(i.main_loop_start))
+<P><STRONG><a name="[d1]"></a>main_loop_start</STRONG> (Thumb, 94 bytes, Stack size 24 bytes, main_funcs.o(i.main_loop_start))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = main_loop_start &rArr; arm_sub_q15
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arm_sub_q15
@@ -1396,8 +1396,8 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_loop
 </UL>
 
-<P><STRONG><a name="[d3]"></a>main_wahwah</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, main_funcs.o(i.main_wahwah))
-<BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = main_wahwah &rArr; wahwah &rArr; arm_biquad_cascade_df1_fast_q15
+<P><STRONG><a name="[d3]"></a>main_wahwah</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, main_funcs.o(i.main_wahwah))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = main_wahwah &rArr; wahwah &rArr; arm_biquad_cascade_df1_q15
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wahwah
 </UL>

@@ -19,12 +19,12 @@
 #define F2Q14(x)  ((q15_t)((float32_t)x * 16384UL))
 #define FS 32000
 #define GAIN 20
-#define Q 10
+#define Q 3
 #define ABS(a) a > 0 ? a : -a
 #define MAX(a, b) a > b ? a : b0
 #define POW_GAIN 10  // 10^(GAIN/20) GAIN=20
 #define POW_GAIN2 3.1622776601683793319988935444327  // 10^(GAIN/40) GAIN=20
-#define F_MAX 500
+#define F_MAX 1000
 #define F_MIN 200
 #define DEBUG 
 #define B0_PRECALC 1.1617 // CON Q=10
@@ -137,81 +137,9 @@ void wahwah_init ()
 	
 	for (int i=0; i<NUM_FILTERS; i++)
 	{
-			
-//FUNCION NORMALIZAR FDATOOL
-//			coeffs [i] [0] =F2Q14(0.689880371093750); 									/* section  1  B0 */
-//  		coeffs [i] [1] =F2Q14(0);
-//  		coeffs [i] [2] =F2Q14(0);	 			/* section  1  B1 */
-//  		coeffs [i] [3] =F2Q14(-0.689941406250000); 										/* section  1  B2 */
-//  		coeffs [i] [4] =F2Q14(1.134521484375000); 		/* section  1 -A1 */
-//  		coeffs [i] [5] =F2Q14(-0.620239257812500);/* section  1 -A2 */
-			
-				
-//FILTERTEST Q=1 GAIN 0.8
-			//coeffs [i] [0] =F2Q14(1); 									/* section  1  B0 */
-			//coeffs [i] [1] =F2Q14(0);
-			//coeffs [i] [2] =F2Q14(-0.522399902343750);	 			/* section  1  B1 */
-			//coeffs [i] [3] =F2Q14(0.477569580078125); 										/* section  1  B2 */
-			//coeffs [i] [4] =F2Q14(0.534667968750000); 		/* section  1 -A1 */
-			//coeffs [i] [5] =F2Q14(-0.512359619140625);/* section  1 -A2 */
-		
-//FILTERTEST Q=10 GAIN 0.8
-		  //	coeffs [i] [0] =F2Q14(0.999969482421875); 									/* section  1  B0 */
-		  //	coeffs [i] [1] =F2Q14(0);
-		  //	coeffs [i] [2] =F2Q14(-0.682952880859375);	 			/* section  1  B1 */
-	   	//	coeffs [i] [3] =F2Q14(0.931671142578125); 										/* section  1  B2 */
-		  //	coeffs [i] [4] =F2Q14(0.684997558593750); 		/* section  1 -A1 */
-	   	//	coeffs [i] [5] =F2Q14(-0.937500000000000);/* section  1 -A2 */
-		
-//FILTERTEST Q=10 GAIN 1
-		//	coeffs [i] [0] =F2Q14(0.999969482421875); 									/* section  1  B0 */
-		//	coeffs [i] [1] =F2Q14(0);
-		//	coeffs [i] [2] =F2Q14(-0.682952880859375);	 			/* section  1  B1 */
-		//	coeffs [i] [3] =F2Q14(0.931671142578125); 										/* section  1  B2 */
-		//	coeffs [i] [4] =F2Q14(0.685455322265625); 		/* section  1 -A1 */
-		//	coeffs [i] [5] =F2Q14(-0.938903808593750);/* section  1 -A2 */
-		
+					
 		filter_calculate(coeffs[i],((F_MAX - F_MIN)/NUM_FILTERS)*i + F_MIN);
 		
-/*		
-    F2Q14(1);										  /* section  2  B0 
-		F2Q14( 0.0);
-		F2Q14(-1.9989013671875 ); 		/* section  2  B1 
-		F2Q14(1); 										/* section  2  B2 
-		F2Q14(0.78826904296875  ); 		/* section  2 -A1 
-		F2Q14(- 0.4776611328125  );   /* section  2 -A2 
-*/
-		
-		
-		
-		//2q14
-		/*
-		coeffs [i] [0] = 0x4000; //DEC  32767-->b0	MATLAB N0	
-		coeffs [i] [1] = 0x0000; //					    0
-		coeffs [i] [2] = 0xC3F9; //DEC -30734-->b1  MATLAB N1	
-		coeffs [i] [3] = 0x38E4; //DEC  29129-->b2  MATLAB N2	
-		coeffs [i] [4] = 0x3E65; //DEC  31946-->a1  MATLAB D1	
-		coeffs [i] [5] = 0xC256; //DEC -31572-->a2  MATLAB D2	
-		*/
-		
-		//q15
-		/*
-		coeffs [i] [0] = 0x7FFF; //DEC  32767-->b0	MATLAB N0	
-		coeffs [i] [1] = 0;			 //					    0
-		coeffs [i] [2] = 0x87F2; //DEC -30734-->b1  MATLAB N1	
-		coeffs [i] [3] = 0x71C9; //DEC  29129-->b2  MATLAB N2	
-		coeffs [i] [4] = 0x7CCA; //DEC  31946-->a1  MATLAB D1	
-		coeffs [i] [5] = 0x84AC; //DEC -31572-->a2  MATLAB D2	
-		*/
-		
-		/*
-	  coeffs [i] [0] = 1-phase;
-		coeffs [i] [1] = 0;
-		coeffs [i] [2] = 0;
-		coeffs [i] [3] = 0x7FFF-phase;
-		coeffs [i] [4] = phase;
-		coeffs [i] [5] = -phase*phase;
-	  */
 
 	  wahwah_filter[i].numStages = NUM_STAGES;  
     wahwah_filter[i].pState = pState[i];  
@@ -255,7 +183,7 @@ void wahwah (q15_t*in, q15_t *out, int buff_size, uint32_t dist)
 
     filt_idx = i / dist;
 	
-	arm_biquad_cascade_df1_fast_q15 (& wahwah_filter [filt_idx], in, out, buff_size);
+	arm_biquad_cascade_df1_q15 (& wahwah_filter [filt_idx], in, out, buff_size);
 
 	return;
 

@@ -30,7 +30,8 @@
  ******************************************************************************/
 
 #define CANT_PASOS 8
-
+#define F2Q14(x)  ((q15_t)((float32_t)x * 16384UL))
+#define TS 0.00003125
 
 typedef enum
 {
@@ -66,7 +67,7 @@ static int eco_paso=0;
 static q15_t pote;
 static q15_t nivelacion_in [DMA_HALF_SIZE*CHANNELS_IN];
 static q15_t nivelacion_out [DMA_HALF_SIZE*CHANNELS_OUT];
-static q15_t *wahwah_in;
+static q15_t wahwah_in [DMA_HALF_SIZE]; // wah wah se aplica en un solo canal, no se puede en ambos al mismo tiempo
 /******************************************************************************
  *  						LOCAL FORWARDS DECLARATIONS
  ******************************************************************************/
@@ -76,6 +77,7 @@ static void main_loopback (void);
 static void main_eco (void);
 static void main_fuzz (void);
 static void main_wahwah (void);
+static void seno(void);
 
 /******************************************************************************
  *  						GLOBAL FUNCTIONS DEFINITION
@@ -94,12 +96,12 @@ void main_init ()
 	int i;
 	for(i=0;i<DMA_HALF_SIZE*CHANNELS_IN;i++)
 	{
-		nivelacion_in[i]=0x0800; //DEC
+		nivelacion_in[i]=0x0800; //DEC 0.0625
 	}
 	
 	for(i=0;i<DMA_HALF_SIZE*CHANNELS_IN;i++)
 	{
-		nivelacion_out[i]=0x4000; //DEC
+		nivelacion_out[i]=0x4000; //DEC 0.5
 	}
 	
 	wahwah_init ();
@@ -186,20 +188,24 @@ void main_loop ()
 
 void main_loop_start ()
 {
-	int i;
+	int i,j;
 	
 	pote=buffer_DMA[1];
 	
-	for (i=0;i<DMA_HALF_SIZE *(CHANNELS_IN);i+=2)
+	for (i=0,j=0;i<DMA_HALF_SIZE * CHANNELS_IN;i+=2,j++)
 	{
 		buffer_DMA [i+1]= buffer_DMA [i];		// utilizar el buffer buffer_DMA y eliminar las muestras que tomo del pote
+		wahwah_in[j]=buffer_DMA[i]<<2;
+		//wahwah_in[j]=F2Q14(sinf(2*PI*500*j*TS)*0.25)+F2Q14(sinf(2*PI*250*j*TS)*0.25)+F2Q14(sinf(2*PI*312.5*j*TS)*0.25);
+		
 	}
 	
-	arm_sub_q15(buffer_DMA, nivelacion_in, buffer_DMA, DMA_HALF_SIZE*CHANNELS_IN);
+	arm_sub_q15(buffer_DMA, nivelacion_in, buffer_DMA, DMA_HALF_SIZE*CHANNELS_IN); // lo sumo para ponerlo al 0 nuestro, porque el ADC tiene 12 bits 
 	arm_shift_q15(&buffer_DMA[0],3,&buffer_DMA[0],DMA_HALF_SIZE*CHANNELS_IN);
 
-	arm_shift_q15(&buffer_DMA[0],-1,&eco_all[DMA_HALF_SIZE*CHANNELS_IN*eco_paso],DMA_HALF_SIZE*CHANNELS_IN);
-	wahwah_in=&eco_all[DMA_HALF_SIZE*CHANNELS_IN*eco_paso];
+	arm_shift_q15(&buffer_DMA[0],0,&eco_all[DMA_HALF_SIZE*CHANNELS_IN*eco_paso],DMA_HALF_SIZE*CHANNELS_IN);
+	//wahwah_in=&eco_all[DMA_HALF_SIZE*CHANNELS_IN*eco_paso];
+		
 }
 
 void main_loop_end ()
@@ -233,11 +239,28 @@ void main_fuzz ()
 void main_wahwah ()
 {
 		uint32_t wah=1;
-		wahwah (wahwah_in, buffer_DMA, DMA_HALF_SIZE*CHANNELS_IN, wah);
+		wahwah (wahwah_in, buffer_DMA, DMA_HALF_SIZE, wah);
+	
+	int i,j;
+		
+	for (i=(DMA_HALF_SIZE*CHANNELS_IN)-2,j=DMA_HALF_SIZE-1;i>=0;i-=2,j--)
+	{
+		buffer_DMA [i]=buffer_DMA[j];
+		buffer_DMA [i+1]=buffer_DMA[j];
+	}
 }
 
-
-
+void seno(void)
+{
+	int i,j;
+	
+	for(i=0,j=0;i<DMA_HALF_SIZE*CHANNELS_IN;i+=2,j++)
+	{
+		buffer_DMA[i]=F2Q14(arm_sin_f32(2*PI*500*j*TS));
+		buffer_DMA[i+1]=F2Q14(arm_sin_f32(2*PI*500*j*TS));
+	}
+	
+}
 
 
 /******************************************************************************
