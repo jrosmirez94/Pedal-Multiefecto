@@ -1,30 +1,25 @@
-filename="C:/Users/jrosmirez/Desktop/guitarraone.wav";
+filename='C:\Users\Juan Rosmirez\Desktop\asusopen.wav';
 [y, fs] = audioread (filename);
 y=y(:,1); % es para agarrar un canal
 y=y/max(y);
 audiowrite(filename,y,fs);
 DMA_HALF_SIZE=2048;
+pote=1;
 
 out=[];
-
+y=y(10000:end);
 for i=1:floor(length(y)/DMA_HALF_SIZE)-1
     block=y(1+DMA_HALF_SIZE*i:(i+1)*DMA_HALF_SIZE); % un bloque de 2048
     z=[];
     for j=1:DMA_HALF_SIZE
         x=(block(j));
-        if x>0
-            s=1;
-        else
-            s=-1;
-        endif    
-        x=abs(block(j));
-        %z=[z s*(sqrt(x+0.0390625).*181.03-35.779631836)/184.33];  
-        z=[z s*(-((abs(x)-1).*(abs(x)-1))+1)];
+        z= [z fuzz_funcs(x,pote)];
         
-    endfor
+        
+    end
     out=[out z];
-endfor
-filename_out="C:/Users/jrosmirez/Desktop/salida.wav";
-%normalizacion
+end
+filename_out='C:\Users\Juan Rosmirez\Desktop\salida.wav';
+%normalizacion para que suene a maximo volumen
 out=out/max(out)*max(y);
 audiowrite(filename_out,out,fs);

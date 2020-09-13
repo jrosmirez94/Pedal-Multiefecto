@@ -190,7 +190,7 @@ void main_loop_start ()
 {
 	int i,j;
 	
-	pote=buffer_DMA[1];
+	pote=buffer_DMA[1]; 
 	
 	for (i=0,j=0;i<DMA_HALF_SIZE * CHANNELS_IN;i+=2,j++)
 	{
@@ -238,7 +238,7 @@ void main_fuzz ()
 }
 void main_wahwah ()
 {
-		uint32_t wah=1;
+		uint32_t wah=pote+1;
 		wahwah (wahwah_in, buffer_DMA, DMA_HALF_SIZE, wah);
 	
 	int i,j;

@@ -27,6 +27,7 @@
 #include "tim.h"
 #include "gpio.h"
 
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "CS43L22.h"
@@ -100,6 +101,7 @@ int main(void)
   MX_TIM9_Init();
   /* USER CODE BEGIN 2 */
 	main_init ();
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
