@@ -238,8 +238,8 @@ void main_fuzz ()
 }
 void main_wahwah ()
 {
-		uint32_t wah=pote+1;
-		wahwah (wahwah_in, buffer_DMA, DMA_HALF_SIZE, wah);
+		uint32_t wah_vel=pote+1;
+		wahwah (wahwah_in, buffer_DMA, DMA_HALF_SIZE, wah_vel);
 	
 	int i,j;
 		

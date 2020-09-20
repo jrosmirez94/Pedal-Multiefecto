@@ -26,7 +26,6 @@
 #define POW_GAIN2 3.1622776601683793319988935444327  // 10^(GAIN/40) GAIN=20
 #define F_MAX 1000
 #define F_MIN 200
-#define DEBUG 
 #define B0_PRECALC 1.1617 // CON Q=10
 #define B2_PRECALC 1.0823 // CON Q=10
 #define A0_PRECALC 1.0315 // con Q=10
@@ -37,42 +36,42 @@ static arm_biquad_casd_df1_inst_q15 wahwah_filter [NUM_FILTERS];
 static q15_t coeffs [NUM_FILTERS] [6 * NUM_STAGES]; // {b10,0 , b11, b12, a11, a12, b20,0 , b21, b22, a21, a22,...}
 static q15_t pState [NUM_FILTERS] [4 * NUM_STAGES];
 
-DEBUG float wo;
-
-    DEBUG float cosW;
-    DEBUG float sinW;
-    DEBUG float A;
-    DEBUG float alpha;
-
-    DEBUG float b0;
-    DEBUG float b1;
-    DEBUG float b2;
-    DEBUG float a0;
-    DEBUG float a1;
-    DEBUG float a2;
-    
-    DEBUG float B0;
-    DEBUG float B1;
-    DEBUG float B2;
-    DEBUG float A1;
-    DEBUG float A2;
-    DEBUG float Mx;
-
-    DEBUG float B0new;
-    DEBUG float B1new;
-    DEBUG float B2new;
-
-    DEBUG float N0;
-    DEBUG float N1;
-    DEBUG float N2;
-    DEBUG float D1;
-    DEBUG float D2;
-
-float f0_g;
-
 void filter_calculate (q15_t * coeff,float f0)
 {
 
+		float wo;
+
+		float cosW;
+		float sinW;
+		float A;
+		float alpha;
+
+		float b0;
+		float b1;
+		float b2;
+		float a0;
+		float a1;
+		float a2;
+				
+		float B0;
+		float B1;
+		float B2;
+		float A1;
+		float A2;
+		float Mx;
+
+		float B0new;
+		float B1new;
+		float B2new;
+
+		float N0;
+		float N1;
+		float N2;
+		float D1;
+		float D2;
+
+		float f0_g;
+	
 		f0_g=f0;
 	
     wo = 2*PI*f0/FS;
@@ -154,34 +153,39 @@ void wahwah_init ()
 }
 
 
-void wahwah (q15_t*in, q15_t *out, int buff_size, uint32_t dist)
+void wahwah (q15_t*in, q15_t *out, int buff_size, uint32_t wah_vel)
 {
 	static int i = 0;
 	static int direccion = 0;
 	
-    int filt_idx = 0;
+  static int filt_idx = 0;
 	
-    if (direccion == 0)
+	i++;
+	
+	if (i%wah_vel==0)
 	{
-		i++;
+	
+			if (direccion == 0)
+		{
+			filt_idx++;
+		}
+		else
+		{
+			filt_idx--;
+		}
+			
+		if (filt_idx >= NUM_FILTERS)
+		{
+			direccion = 1;
+			filt_idx--;
+		}
+		else if (filt_idx <= 0)
+		{
+			direccion = 0;
+			filt_idx++;
+		}
 	}
-	else
-	{
-		i--;
-	}
-    
-	if (i >= dist*NUM_FILTERS)
-	{
-		direccion = 1;
-		i--;
-	}
-	else if (i <= 0)
-	{
-		direccion = 0;
-		i++;
-	}
-
-    filt_idx = i / dist;
+    //filt_idx = i / wah_vel;
 	
 	arm_biquad_cascade_df1_q15 (& wahwah_filter [filt_idx], in, out, buff_size);
 

@@ -27,7 +27,6 @@
 #include "tim.h"
 #include "gpio.h"
 
-
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "CS43L22.h"

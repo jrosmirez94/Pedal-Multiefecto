@@ -8,7 +8,7 @@
 
 
 void wahwah_init (void);
-void wahwah (q15_t *x, q15_t *out, int buff_size, uint32_t dist);
+void wahwah (q15_t *x, q15_t *out, int buff_size, uint32_t wah_vel);
 
 
 
