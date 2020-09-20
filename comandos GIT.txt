@@ -1,4 +1,4 @@
-cd home/jrosmirez94/Pedal-Multiefecto
+cd "C:\Users\Juan Rosmirez\Documents\Jorge\Home\Pedal-Multiefecto"
 
 git pull
 
