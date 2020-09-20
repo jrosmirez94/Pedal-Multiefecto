@@ -18,8 +18,8 @@
 #define DELTA_PHASE 0x0333 //	(MAX_PHASE - MIN_PHASE) / NUM_FILTERS;
 #define F2Q14(x)  ((q15_t)((float32_t)x * 16384UL))
 #define FS 32000
-#define GAIN 20
-#define Q 3
+#define GAIN 20  //ganacia baja p/wahwah
+#define Q 3				// q elevado p/wahwah
 #define ABS(a) a > 0 ? a : -a
 #define MAX(a, b) a > b ? a : b0
 #define POW_GAIN 10  // 10^(GAIN/20) GAIN=20
@@ -185,7 +185,7 @@ void wahwah (q15_t*in, q15_t *out, int buff_size, uint32_t wah_vel)
 			filt_idx++;
 		}
 	}
-    //filt_idx = i / wah_vel;
+  
 	
 	arm_biquad_cascade_df1_q15 (& wahwah_filter [filt_idx], in, out, buff_size);
 
