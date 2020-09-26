@@ -1,1 +1,72 @@
-<mxfile host="app.diagrams.net" modified="2020-09-26T16:27:05.615Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36" version="13.7.5" etag="YinnpLiQkeS6juhV1XJr" type="github"><diagram id="fe8C8-T55YGDkcW59FNJ">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2020-09-26T16:39:12.911Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36" etag="7PWeOMujeq43bLrZxKi-" version="13.7.5" type="github">
+  <diagram id="fe8C8-T55YGDkcW59FNJ" name="Page-1">
+    <mxGraphModel dx="1022" dy="437" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="SlzfPbg06V8I5GnovlOZ-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="SlzfPbg06V8I5GnovlOZ-1" target="SlzfPbg06V8I5GnovlOZ-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SlzfPbg06V8I5GnovlOZ-1" value="Señal de entrada" style="pointerEvents=1;verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.waveforms.sine_wave;" vertex="1" parent="1">
+          <mxGeometry x="10" y="180" width="90" height="66.18" as="geometry" />
+        </mxCell>
+        <mxCell id="SlzfPbg06V8I5GnovlOZ-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="SlzfPbg06V8I5GnovlOZ-2" target="SlzfPbg06V8I5GnovlOZ-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SlzfPbg06V8I5GnovlOZ-2" value="DC-Block" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="177.68" width="76" height="70.82" as="geometry" />
+        </mxCell>
+        <mxCell id="SlzfPbg06V8I5GnovlOZ-11" value="ADC" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="SlzfPbg06V8I5GnovlOZ-8" target="SlzfPbg06V8I5GnovlOZ-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SlzfPbg06V8I5GnovlOZ-8" value="Filtro AntiAlias" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="251" y="177.68" width="76" height="70.82" as="geometry" />
+        </mxCell>
+        <mxCell id="SlzfPbg06V8I5GnovlOZ-30" value="DAC" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="SlzfPbg06V8I5GnovlOZ-10" target="SlzfPbg06V8I5GnovlOZ-31">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="610" y="213.09000000000003" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SlzfPbg06V8I5GnovlOZ-10" value="MicroControlador&lt;br&gt;STM32F411&lt;br&gt;(Discovery Kit)" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="378" y="128.09" width="170" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="SlzfPbg06V8I5GnovlOZ-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="SlzfPbg06V8I5GnovlOZ-12" target="SlzfPbg06V8I5GnovlOZ-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SlzfPbg06V8I5GnovlOZ-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.867;entryY=1.003;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="SlzfPbg06V8I5GnovlOZ-12" target="SlzfPbg06V8I5GnovlOZ-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SlzfPbg06V8I5GnovlOZ-12" value="Potenciómetro (ADC interno)&lt;br&gt;Botón interno (GPIO - Modifica efecto)&lt;br&gt;4 Leds (GPIO - Indica efecto)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="338.5" y="340" width="249" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SlzfPbg06V8I5GnovlOZ-20" value="" style="endArrow=classic;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="SlzfPbg06V8I5GnovlOZ-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="421" y="339" as="sourcePoint" />
+            <mxPoint x="401" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SlzfPbg06V8I5GnovlOZ-27" value="" style="endArrow=classic;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.671;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="SlzfPbg06V8I5GnovlOZ-10" target="SlzfPbg06V8I5GnovlOZ-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="488" y="340" as="sourcePoint" />
+            <mxPoint x="538" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SlzfPbg06V8I5GnovlOZ-28" value="" style="endArrow=classic;html=1;exitX=0.359;exitY=0.999;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.404;entryY=-0.02;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="SlzfPbg06V8I5GnovlOZ-10" target="SlzfPbg06V8I5GnovlOZ-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="438" y="340" as="sourcePoint" />
+            <mxPoint x="488" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SlzfPbg06V8I5GnovlOZ-36" style="edgeStyle=orthogonalEdgeStyle;shape=link;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.549;entryY=-0.104;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.6;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="SlzfPbg06V8I5GnovlOZ-31" target="SlzfPbg06V8I5GnovlOZ-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SlzfPbg06V8I5GnovlOZ-31" value="" style="pointerEvents=1;verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.electro-mechanical.loudspeaker;" vertex="1" parent="1">
+          <mxGeometry x="644" y="185" width="40" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="SlzfPbg06V8I5GnovlOZ-32" value="" style="pointerEvents=1;verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.signal_sources.signal_ground;" vertex="1" parent="1">
+          <mxGeometry x="610" y="255.08999999999997" width="25" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
