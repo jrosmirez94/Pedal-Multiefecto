@@ -13,7 +13,6 @@
 
 q15_t fuzz(q15_t x,q15_t pote)
 {
-	//pote+=0x008E;
 	q15_t threshold [CANT_THRESHOLD]={0, 0x0100, 0x1000, 0x4000, 0x7FFF};
 	q15_t pendiente[CANT_THRESHOLD];
 	q15_t min_pendiente[CANT_THRESHOLD]={0x7FFF, 0x1000, 0x0200, 0x0040, 0x0000};

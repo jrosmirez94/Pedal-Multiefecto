@@ -184,7 +184,8 @@ void main_loop ()
 		main_loop_end ();
 		transmit_ready=DMA_LOGIC_READY;
 	}
-} // main_loop
+} 
+// main_loop
 
 void main_loop_start ()
 {
@@ -196,16 +197,14 @@ void main_loop_start ()
 	{
 		buffer_DMA [i+1]= buffer_DMA [i];		// utilizar el buffer buffer_DMA y eliminar las muestras que tomo del pote
 		wahwah_in[j]=buffer_DMA[i]<<2;
-		//wahwah_in[j]=F2Q14(sinf(2*PI*500*j*TS)*0.25)+F2Q14(sinf(2*PI*250*j*TS)*0.25)+F2Q14(sinf(2*PI*312.5*j*TS)*0.25);
 		
 	}
 	
-	arm_sub_q15(buffer_DMA, nivelacion_in, buffer_DMA, DMA_HALF_SIZE*CHANNELS_IN); // lo sumo para ponerlo al 0 nuestro, porque el ADC tiene 12 bits 
-	arm_shift_q15(&buffer_DMA[0],3,&buffer_DMA[0],DMA_HALF_SIZE*CHANNELS_IN);
+	arm_sub_q15(buffer_DMA, nivelacion_in, buffer_DMA, DMA_HALF_SIZE*CHANNELS_IN); // le resto ponerlo al 0 nuestro, porque el ADC tiene 12 bits 
+	arm_shift_q15(&buffer_DMA[0],3,&buffer_DMA[0],DMA_HALF_SIZE*CHANNELS_IN); // como mi ADC es 12 bits y mi DAC 16 bits --> shifteo para aprovechar el rango.
 
 	arm_shift_q15(&buffer_DMA[0],0,&eco_all[DMA_HALF_SIZE*CHANNELS_IN*eco_paso],DMA_HALF_SIZE*CHANNELS_IN);
-	//wahwah_in=&eco_all[DMA_HALF_SIZE*CHANNELS_IN*eco_paso];
-		
+	
 }
 
 void main_loop_end ()
@@ -223,7 +222,7 @@ unsigned int paso_actual;
 
 void main_eco ()
 {
-	paso_actual=(int)(((pote*CANT_PASOS)>>12)+eco_paso)%CANT_PASOS; // 524383.848977451
+	paso_actual=(int)(((pote*CANT_PASOS)>>12)+eco_paso)%CANT_PASOS;
 	arm_add_q15(buffer_DMA,&eco_all[DMA_HALF_SIZE*CHANNELS_IN*paso_actual],buffer_DMA,DMA_HALF_SIZE*CHANNELS_IN);
 }
 
