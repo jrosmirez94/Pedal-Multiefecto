@@ -1,1 +1,46 @@
-<mxfile host="app.diagrams.net" modified="2020-09-28T21:39:09.561Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36" etag="WpOdgg5EYQRw3eEjCbTV" version="13.7.6" type="github"><diagram id="0VFvLtj6nHnEVhGMtKS4" name="Page-1">7Vhdb5swFP01eQwCDCR5TEjXaeqqStk0bS+TAw5YM5gZE5L9+tnB5iOQJpnSadUaJGQfm3vte47vDYyAn+zuGczijzREZGSb4W4EliPbnnpTcZfAvgIc06qAiOGwglrACv9CCjQVWuAQ5Z2JnFLCcdYFA5qmKOAdDDJGy+60DSVdrxmMUA9YBZD00S845LHalj1p8PcIR7H2bHmzaiSBerLaSR7DkJYtCNyNgM8o5VUr2fmIyNjpuFTPvTsxWi+MoZRf8sBy4zyG+/KhQOUC+POviyIdjy1FzxaSQu1YrZbvdQgiRous700tYIsYR7shLuBaW2i2K2SCaII424t5+qmZipCSiOWqftkEHJgKi9vBnigQKpKj2nYTB9FQobgmLLPzYUFpOJcCE72AwDzHwQgsYp4IR0tLNHPO6I9aNGL/i34Mn+UEhR1p9uPXio87EB6NMUQgx9uuoIdCpjw8USzWV9MDPMOdusDTN+eILMdwndYFuvZzWrAAKZNtdV7mRZvhkEWI98wcyK0j8ud86zP6xvdf49s8PvTP231pAVjnBZBJ54jdbQWduSJdZj8sqsUDXCPyRHPMMU3F2JpyThOpCp31TdEJYR6jUHUgwZGcGiBptaslbXau5nCaVbYyuZZkF8laayAisiyT84wSbtGGsiQ3cpyi77J7vQB7qfxkyj6nEcMZ4rKlX9uxDMcDjqVv7kB6PyOJm2V7zXWHfI+IZSzWohHJhrkzp1KyFSzc1CM9nYgY8qHU4FNCBc/LlKaSnA0m5AjqSeJYBwkOQ+lmUcaYo1UGA+mzFGoQmCjTaVjL6/bcK3ZtYFjT9tUnd2bY3tSe1bfJELnDGrk9ueASch3zjdzDH1v3H2fTvapQq9DXedf6H0v2zDYmdvu6TcU+Y/Z2BfvL/Wc78cfutnicf/v0gY696WI8VK/7Kfs1nuqBF6oL9XiyXI9dA0zM1s9xuwXb6b9xOQNytV/qfcv2TtK5oQcRNmR5PwuqB8b54YPBXEywvGzXDDZMH4liJQgLoZi/nPvD0qixyvMrUMwlb+Wn/8odH+u+FGYDUgDXS0F0m68dVR5oPhmBu98=</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2020-09-28T21:40:29.425Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36" etag="4nCcNZqgRQGWkrHPCazM" version="13.7.6" type="github">
+  <diagram id="0VFvLtj6nHnEVhGMtKS4" name="Page-1">
+    <mxGraphModel dx="868" dy="401" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Df4NdywLuewB3CAYBun--18" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="190" y="150" width="300" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="Df4NdywLuewB3CAYBun--19" value="" style="endArrow=classic;html=1;strokeWidth=2;" parent="Df4NdywLuewB3CAYBun--18" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="36.58536585365854" y="154.54545454545453" as="sourcePoint" />
+            <mxPoint x="36.58536585365854" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Df4NdywLuewB3CAYBun--20" value="" style="endArrow=classic;html=1;strokeWidth=2;" parent="Df4NdywLuewB3CAYBun--18" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="36.58536585365854" y="154.54545454545453" as="sourcePoint" />
+            <mxPoint x="300" y="154.54545454545453" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Df4NdywLuewB3CAYBun--21" value="" style="pointerEvents=1;verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.waveforms.sine_wave;" parent="Df4NdywLuewB3CAYBun--18" vertex="1">
+          <mxGeometry x="36.58536585365854" y="15.454545454545453" width="241.46341463414635" height="154.54545454545453" as="geometry" />
+        </mxCell>
+        <mxCell id="Df4NdywLuewB3CAYBun--22" value="&lt;b&gt;0x8000&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="Df4NdywLuewB3CAYBun--18" vertex="1">
+          <mxGeometry y="23.18181818181818" width="29.268292682926827" height="15.454545454545453" as="geometry" />
+        </mxCell>
+        <mxCell id="Df4NdywLuewB3CAYBun--23" value="&lt;b&gt;0x4000&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="Df4NdywLuewB3CAYBun--18" vertex="1">
+          <mxGeometry y="85" width="29.268292682926827" height="15.454545454545453" as="geometry" />
+        </mxCell>
+        <mxCell id="Df4NdywLuewB3CAYBun--25" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=2;" parent="Df4NdywLuewB3CAYBun--18" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="36.58536585365854" y="92.72727272727272" as="sourcePoint" />
+            <mxPoint x="300" y="92.72727272727272" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WGU2mC-5vuNAZTJo-68B-1" value="&lt;b&gt;0x0000&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="Df4NdywLuewB3CAYBun--18" vertex="1">
+          <mxGeometry x="-5.3700000000000045" y="140" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Df4NdywLuewB3CAYBun--26" value="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;Salida DAC&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="300" y="90" width="90" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
