@@ -1,4 +1,4 @@
-filename='C:\Users\Juan Rosmirez\Desktop\asusopen.wav';
+filename='C:\Users\Jorge Rosmirez\Desktop\asusopen.wav';
 [y, fs] = audioread (filename);
 y=y(:,1); % es para agarrar un canal
 y=y/max(y);
@@ -19,7 +19,7 @@ for i=1:floor(length(y)/DMA_HALF_SIZE)-1
     end
     out=[out z];
 end
-filename_out='C:\Users\Juan Rosmirez\Desktop\salida.wav';
+filename_out='C:\Users\Jorge Rosmirez\Desktop\salida.wav';
 %normalizacion para que suene a maximo volumen
 out=out/max(out)*max(y);
 audiowrite(filename_out,out,fs);
